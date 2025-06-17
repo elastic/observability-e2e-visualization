@@ -1,0 +1,420 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "title": "Service chain status",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "padding": 20,
+  "data": [
+    {
+      "name": "status",
+      "url": "data/input-status.json",
+      "format": {
+        "property": "aggregations.service.buckets"
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "as": "name",
+          "expr": "datum.key"
+        },
+        {
+          "type": "formula",
+          "as": "status",
+          "expr": "datum.status.buckets[0].key"
+        }
+      ]
+    },
+    {
+      "name": "resources",
+      "url": "data/input-services.json",
+      "format": {
+        "property": "hits.hits"
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "as": "name",
+          "expr": "datum._source.name"
+        },
+        {
+          "type": "formula",
+          "as": "type",
+          "expr": "datum._source.type"
+        },
+        {
+          "type": "formula",
+          "as": "connected_to",
+          "expr": "datum._source.connected_to"
+        },
+        {
+          "type": "formula",
+          "as": "connected_via",
+          "expr": "datum._source.connected_via"
+        },
+        {
+          "type": "formula",
+          "as": "size",
+          "expr": "1"
+        },
+        {
+          "type": "formula",
+          "as": "level",
+          "expr": "datum._source.level"
+        },
+        {
+          "type": "formula",
+          "as": "service_chain",
+          "expr": "datum._source.service_chain"
+        },
+        {
+          "type": "project",
+          "fields": [
+            "name",
+            "type",
+            "connected_to",
+            "connected_via",
+            "size",
+            "level",
+            "service_chain"
+          ],
+          "as": [
+            "name",
+            "type",
+            "connected_to",
+            "connected_via",
+            "size",
+            "level",
+            "service_chain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "nodes",
+      "source": "resources",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [
+            "service_chain",
+            "type",
+            "name"
+          ],
+          "fields": [
+            "size"
+          ],
+          "as": [
+            "size"
+          ]
+        },
+        {
+          "type": "lookup",
+          "from": "status",
+          "key": "name",
+          "fields": [
+            "name"
+          ],
+          "as": [
+            "status"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "(datum.status == null ? 0 : datum.status.doc_count)",
+          "as": "status"
+        },
+        {
+          "type": "stack",
+          "groupby": [
+            "type"
+          ],
+          "sort": {
+            "field": "name",
+            "order": "descending"
+          },
+          "field": "size",
+          "offset": "center"
+        },
+        {
+          "type": "formula",
+          "expr": "(datum.y0)",
+          "as": "y0"
+        },
+        {
+          "type": "formula",
+          "expr": "(datum.y0+datum.y1)/2",
+          "as": "yc"
+        },
+        {
+          "type": "formula",
+          "expr": "'#/view/6070a0ec-eb3c-43b7-9a8b-b96318414f4e?_a=(query:(language:kuery,query:%27 \"' + datum.name + '\" %27'",
+          "as": "link"
+        },
+        {
+          "type": "formula",
+          "expr": "95 + round(random() * 5)",
+          "as": "availability"
+        } 
+      ]
+    },
+    {
+      "name": "links",
+      "source": "resources",
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "nodes",
+          "key": "name",
+          "fields": [
+            "connected_to"
+          ],
+          "as": [
+            "target"
+          ]
+        },
+        {
+          "type": "lookup",
+          "from": "nodes",
+          "key": "name",
+          "fields": [
+            "name"
+          ],
+          "as": [
+            "source"
+          ]
+        },
+        {
+          "type": "filter",
+          "expr": "datum.target != null"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.target == null ? 0 : datum.target.yc",
+          "as": "targetYC"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.target == null ? '' : datum.target.type",
+          "as": "targetType"
+        },
+        {
+          "type": "linkpath",
+          "orient": "horizontal",
+          "shape": "diagonal",
+          "sourceY": {
+            "expr": "scale('y', datum.source.yc)"
+          },
+          "sourceX": {
+            "expr": "scale('x', datum.type)"
+          },
+          "targetY": {
+            "expr": "scale('y', datum.targetYC)"
+          },
+          "targetX": {
+            "expr": "scale('x', datum.targetType)"
+          }
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "band",
+      "range": "width",
+      "domain": {
+        "data": "nodes",
+        "field": "type"
+      },
+      "paddingOuter": 0.05,
+      "paddingInner": 0.90
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "range": "height",
+      "domain": {
+        "data": "nodes",
+        "field": "y1"
+      }
+    },
+    {
+      "name": "lineColor",
+      "type": "ordinal",
+      "range": "category",
+      "domain": {
+        "data": "resources",
+        "field": "connected_via"
+      }
+    }
+  ],
+  "legends": [
+    {
+      "title": "Connection types",
+      "fill": "lineColor",
+      "orient": "top-right",
+      "encode": {
+        "title": {
+          "update": {
+            "fontSize": {
+              "value": 14
+            }
+          }
+        },
+        "labels": {
+          "interactive": true,
+          "update": {
+            "fontSize": {
+              "value": 12
+            },
+            "fill": {
+              "value": "white"
+            }
+          },
+          "hover": {
+            "fill": {
+              "value": "firebrick"
+            }
+          }
+        },
+        "symbols": {
+          "update": {
+            "stroke": {
+              "value": "transparent"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "path",
+      "name": "linksMark",
+      "from": {
+        "data": "links"
+      },
+      "encode": {
+        "enter": {
+          "strokeWidth": {
+            "value": 5
+          },
+          "tooltip": [
+            {
+              "signal": "{'Type': datum.connected_via, 'Failure rate': datum.size}"
+            }
+          ]
+        },
+        "update": {
+          "path": {
+            "field": "path"
+          },
+          "stroke": [
+            {
+              "scale": "lineColor",
+              "field": "connected_via"
+            }
+          ],
+          "strokeWidth": {
+            "value": 5
+          },
+          "href": {
+            "signal": "datum.link"
+          }
+        },
+        "hover": {
+          "strokeWidth": {
+            "value": 10
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "circleMark",
+      "from": {
+        "data": "nodes"
+      },
+      "encode": {
+        "enter": {
+          "shape": {
+            "value": "circle"
+          },
+          "size": {
+            "value": 4000
+          },
+          "fill": [
+            {
+              "test": "datum.status == 0",
+              "value": "#6aa84f"
+            },
+            {
+              "value": "#cc0000"
+            }
+          ],
+          "cursor": {
+            "value": "pointer"
+          },
+          "tooltip": [
+            {
+              "signal": "{'Name': datum.name,'Hits': datum.status, 'Availability': datum.availability + '%'}"
+            }
+          ]
+        },
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "type"
+          },
+          "y": {
+            "scale": "y",
+            "field": "yc"
+          },
+          "href": {
+            "signal": "datum.link"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "nodes"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "type"
+          },
+          "y": {
+            "scale": "y",
+            "field": "yc",
+            "offset": -10
+          },
+          "text": {
+            "signal": "datum.name"
+          },
+          "fill": {
+            "value": "white"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "lineBreak": {
+            "value": "$"
+          }
+        }
+      }
+    }
+  ]
+}

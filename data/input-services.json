@@ -1,0 +1,1532 @@
+{
+  "took": 0,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 82,
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "services",
+        "_id": "WqBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "CDN",
+          "name": "UI",
+          "service_chain": "TV",
+          "connected_via": "uses",
+          "type": "Level 1: Frontend"
+        },
+        "name": "UI",
+        "type": "Level 1: Frontend",
+        "connected_to": "CDN",
+        "connected_via": "uses",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "W6BbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "CDN",
+          "name": "API",
+          "service_chain": "TV",
+          "connected_via": "uses",
+          "type": "Level 1: Frontend"
+        },
+        "name": "API",
+        "type": "Level 1: Frontend",
+        "connected_to": "CDN",
+        "connected_via": "uses",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "XKBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "Authentication",
+          "name": "UI",
+          "service_chain": "TV",
+          "connected_via": "uses",
+          "type": "Level 1: Frontend"
+        },
+        "name": "UI",
+        "type": "Level 1: Frontend",
+        "connected_to": "Authentication",
+        "connected_via": "uses",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "XaBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "Authentication",
+          "name": "API",
+          "service_chain": "TV",
+          "connected_via": "uses",
+          "type": "Level 1: Frontend"
+        },
+        "name": "API",
+        "type": "Level 1: Frontend",
+        "connected_to": "Authentication",
+        "connected_via": "uses",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "XqBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "Transcoding",
+          "name": "CDN",
+          "service_chain": "TV",
+          "connected_via": "runs in",
+          "type": "Level 2: CDN"
+        },
+        "name": "CDN",
+        "type": "Level 2: CDN",
+        "connected_to": "Transcoding",
+        "connected_via": "runs in",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "X6BbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "Streaming",
+          "name": "CDN",
+          "service_chain": "TV",
+          "connected_via": "runs in",
+          "type": "Level 2: CDN"
+        },
+        "name": "CDN",
+        "type": "Level 2: CDN",
+        "connected_to": "Streaming",
+        "connected_via": "runs in",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "YKBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "IdP",
+          "name": "Authentication",
+          "service_chain": "TV",
+          "connected_via": "uses",
+          "type": "Level 3: Backend"
+        },
+        "name": "Authentication",
+        "type": "Level 3: Backend",
+        "connected_to": "IdP",
+        "connected_via": "uses",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "YaBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "CMS",
+          "name": "Transcoding",
+          "service_chain": "TV",
+          "connected_via": "HTTPS",
+          "type": "Level 3: Backend"
+        },
+        "name": "Transcoding",
+        "type": "Level 3: Backend",
+        "connected_to": "CMS",
+        "connected_via": "HTTPS",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "YqBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "CMS",
+          "name": "Streaming",
+          "service_chain": "TV",
+          "connected_via": "HTTPS",
+          "type": "Level 3: Backend"
+        },
+        "name": "Streaming",
+        "type": "Level 3: Backend",
+        "connected_to": "CMS",
+        "connected_via": "HTTPS",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "Y6BbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "name": "IdP",
+          "service_chain": "TV",
+          "view": "Logical",
+          "connected_via": "HTTPS",
+          "type": "Level 4: External Services"
+        },
+        "name": "IdP",
+        "type": "Level 4: External Services",
+        "connected_via": "HTTPS",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "ZKBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "name": "CMS",
+          "service_chain": "TV",
+          "view": "Logical",
+          "connected_via": "HTTPS",
+          "type": "Level 4: External Services"
+        },
+        "name": "CMS",
+        "type": "Level 4: External Services",
+        "connected_via": "HTTPS",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "ZaBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Use Case",
+          "connected_to": "TVHS",
+          "name": "Android TV Client",
+          "service_chain": "TV",
+          "connected_via": "default",
+          "type": "Level 1: Client"
+        },
+        "name": "Android TV Client",
+        "type": "Level 1: Client",
+        "connected_to": "TVHS",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "ZqBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Use Case",
+          "connected_to": "CMLS",
+          "name": "TVHS",
+          "service_chain": "TV",
+          "connected_via": "default",
+          "type": "Level 2: Backend"
+        },
+        "name": "TVHS",
+        "type": "Level 2: Backend",
+        "connected_to": "CMLS",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "Z6BbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Use Case",
+          "connected_to": "TVHS DB",
+          "name": "TVHS",
+          "service_chain": "TV",
+          "connected_via": "default",
+          "type": "Level 2: Backend"
+        },
+        "name": "TVHS",
+        "type": "Level 2: Backend",
+        "connected_to": "TVHS DB",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "aKBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "name": "TVHS DB",
+          "service_chain": "TV",
+          "view": "Use Case",
+          "connected_via": "default",
+          "type": "Level 4: Databases"
+        },
+        "name": "TVHS DB",
+        "type": "Level 4: Databases",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "aaBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Use Case",
+          "connected_to": "CMLS DB",
+          "name": "CMLS",
+          "service_chain": "TV",
+          "connected_via": "default",
+          "type": "Level 3: Content delivery"
+        },
+        "name": "CMLS",
+        "type": "Level 3: Content delivery",
+        "connected_to": "CMLS DB",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "aqBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "Use Case",
+          "connected_to": "-",
+          "name": "CMLS DB",
+          "service_chain": "TV",
+          "connected_via": "default",
+          "type": "Level 4: Databases"
+        },
+        "name": "CMLS DB",
+        "type": "Level 4: Databases",
+        "connected_to": "-",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "TV"
+      },
+      {
+        "_index": "services",
+        "_id": "baBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "-",
+          "connected_to": "backend",
+          "name": "fiber access point",
+          "service_chain": "-",
+          "connected_via": "-",
+          "type": "-"
+        },
+        "name": "fiber access point",
+        "type": "-",
+        "connected_to": "backend",
+        "connected_via": "-",
+        "size": 1,
+        "service_chain": "-"
+      },
+      {
+        "_index": "services",
+        "_id": "bqBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "-",
+          "connected_to": "tower",
+          "name": "phone",
+          "service_chain": "voice-call",
+          "connected_via": "-",
+          "type": "-"
+        },
+        "name": "phone",
+        "type": "-",
+        "connected_to": "tower",
+        "connected_via": "-",
+        "size": 1,
+        "service_chain": "voice-call"
+      },
+      {
+        "_index": "services",
+        "_id": "a6BbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "high level",
+          "connected_to": "backend",
+          "name": "tower",
+          "service_chain": "Voice",
+          "connected_via": "-",
+          "type": "tower"
+        },
+        "name": "tower",
+        "type": "tower",
+        "connected_to": "backend",
+        "connected_via": "-",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services",
+        "_id": "bKBbUZUBFItKux1Ffy3_",
+        "_score": 1,
+        "_source": {
+          "view": "high level",
+          "name": "backend",
+          "service_chain": "Voice",
+          "connected_via": "-",
+          "type": "backend"
+        },
+        "name": "backend",
+        "type": "backend",
+        "connected_via": "-",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "3TWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "payment",
+          "name": "accounting",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "accounting",
+        "type": "Level 3: Backend",
+        "connected_to": "payment",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "3jWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "payment",
+          "name": "ad",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "ad",
+        "type": "Level 3: Backend",
+        "connected_to": "payment",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "3zWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "sidecar",
+          "name": "autoscaler",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "autoscaler",
+        "type": "Level 3: Backend",
+        "connected_to": "sidecar",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "4DWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "payment",
+          "name": "cart",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "cart",
+        "type": "Level 3: Backend",
+        "connected_to": "payment",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "4TWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "shipping",
+          "name": "cart",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "cart",
+        "type": "Level 3: Backend",
+        "connected_to": "shipping",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "4jWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "payment",
+          "name": "checkout",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "checkout",
+        "type": "Level 3: Backend",
+        "connected_to": "payment",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "4zWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "accounting",
+          "name": "collector",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "collector",
+        "type": "Level 2: CDN",
+        "connected_to": "accounting",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "5DWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "ad",
+          "name": "collector",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "collector",
+        "type": "Level 2: CDN",
+        "connected_to": "ad",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "5TWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "autoscaler",
+          "name": "collector",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "collector",
+        "type": "Level 2: CDN",
+        "connected_to": "autoscaler",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "5jWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "cart",
+          "name": "collector",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "collector",
+        "type": "Level 2: CDN",
+        "connected_to": "cart",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "5zWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "checkout",
+          "name": "collector",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "collector",
+        "type": "Level 2: CDN",
+        "connected_to": "checkout",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "6DWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "default-http-backend",
+          "name": "config-reloader",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "config-reloader",
+        "type": "Level 2: CDN",
+        "connected_to": "default-http-backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "6TWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "dnsmasq",
+          "name": "core-metrics-exporter",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "core-metrics-exporter",
+        "type": "Level 2: CDN",
+        "connected_to": "dnsmasq",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "6jWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "dnsmasq",
+          "name": "csi-driver-registrar",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "csi-driver-registrar",
+        "type": "Level 2: CDN",
+        "connected_to": "dnsmasq",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "6zWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "currency",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "currency",
+        "type": "Level 3: Backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "7DWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "default-http-backend",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "default-http-backend",
+        "type": "Level 3: Backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "7TWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "dnsmasq",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "dnsmasq",
+        "type": "Level 3: Backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "7jWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "default-http-backend",
+          "name": "email",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "email",
+        "type": "Level 2: CDN",
+        "connected_to": "default-http-backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "7zWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "event-exporter",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "event-exporter",
+        "type": "Level 3: Backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "8DWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "currency",
+          "name": "flagd",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "flagd",
+        "type": "Level 2: CDN",
+        "connected_to": "currency",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "8TWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "currency",
+          "name": "fraud-detection",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "fraud-detection",
+        "type": "Level 2: CDN",
+        "connected_to": "currency",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "8jWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "ad",
+          "name": "frontend",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 1: Frontend"
+        },
+        "name": "frontend",
+        "type": "Level 1: Frontend",
+        "connected_to": "ad",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "8zWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "ad",
+          "name": "frontend-proxy",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 1: Frontend"
+        },
+        "name": "frontend-proxy",
+        "type": "Level 1: Frontend",
+        "connected_to": "ad",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "9DWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "fraud-detection",
+          "name": "frontend-proxy",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 1: Frontend"
+        },
+        "name": "frontend-proxy",
+        "type": "Level 1: Frontend",
+        "connected_to": "fraud-detection",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "9TWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "default-http-backend",
+          "name": "frontend-proxy",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 1: Frontend"
+        },
+        "name": "frontend-proxy",
+        "type": "Level 1: Frontend",
+        "connected_to": "default-http-backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "9jWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "ad",
+          "name": "frontend-web",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 1: Frontend"
+        },
+        "name": "frontend-web",
+        "type": "Level 1: Frontend",
+        "connected_to": "ad",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "9zWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "ad",
+          "name": "frontend-web",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 1: Frontend"
+        },
+        "name": "frontend-web",
+        "type": "Level 1: Frontend",
+        "connected_to": "ad",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "-DWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "config-reloader",
+          "name": "frontend-web",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 1: Frontend"
+        },
+        "name": "frontend-web",
+        "type": "Level 1: Frontend",
+        "connected_to": "config-reloader",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "-TWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "collector",
+          "name": "gce-pd-driver",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 2: CDN"
+        },
+        "name": "gce-pd-driver",
+        "type": "Level 2: CDN",
+        "connected_to": "collector",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "-jWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "gmp-operator",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "gmp-operator",
+        "type": "Level 3: Backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "-zWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "image-provider",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "image-provider",
+        "type": "Level 3: Backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "_DWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "kafka",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 3: Backend"
+        },
+        "name": "kafka",
+        "type": "Level 3: Backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "_TWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "default-http-backend",
+          "name": "load-generator",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 1: Frontend"
+        },
+        "name": "load-generator",
+        "type": "Level 1: Frontend",
+        "connected_to": "default-http-backend",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "_jWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "operator",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 4: External Services"
+        },
+        "name": "operator",
+        "type": "Level 4: External Services",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "_zWVZZUBcR4UuqWVSOuc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "payment",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 4: External Services"
+        },
+        "name": "payment",
+        "type": "Level 4: External Services",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "ADWVZZUBcR4UuqWVSOyc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "product-catalog",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 4: External Services"
+        },
+        "name": "product-catalog",
+        "type": "Level 4: External Services",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "ATWVZZUBcR4UuqWVSOyc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "quote",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 4: External Services"
+        },
+        "name": "quote",
+        "type": "Level 4: External Services",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "AjWVZZUBcR4UuqWVSOyc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "recommendation",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 4: External Services"
+        },
+        "name": "recommendation",
+        "type": "Level 4: External Services",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "AzWVZZUBcR4UuqWVSOyc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "shipping",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 4: External Services"
+        },
+        "name": "shipping",
+        "type": "Level 4: External Services",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "BDWVZZUBcR4UuqWVSOyc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "sidecar",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 4: External Services"
+        },
+        "name": "sidecar",
+        "type": "Level 4: External Services",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_ruv",
+        "_id": "BTWVZZUBcR4UuqWVSOyc",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "name": "valkey-cart",
+          "service_chain": "Voice",
+          "connected_via": "default",
+          "type": "Level 4: External Services"
+        },
+        "name": "valkey-cart",
+        "type": "Level 4: External Services",
+        "connected_via": "default",
+        "size": 1,
+        "service_chain": "Voice"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "0Sp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "SECgw 1",
+          "name": "eNodeB - 234u23",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "1: RAN Domain"
+        },
+        "name": "eNodeB - 234u23",
+        "type": "1: RAN Domain",
+        "connected_to": "SECgw 1",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "0ip_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "SECgw 2",
+          "name": "eNodeB - 234u23",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "1: RAN Domain"
+        },
+        "name": "eNodeB - 234u23",
+        "type": "1: RAN Domain",
+        "connected_to": "SECgw 2",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "0yp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "SECgw 1",
+          "name": "eNodeB - 4562kjsf",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "1: RAN Domain"
+        },
+        "name": "eNodeB - 4562kjsf",
+        "type": "1: RAN Domain",
+        "connected_to": "SECgw 1",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "1Cp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "SECgw 2",
+          "name": "eNodeB - 4562kjsf",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "1: RAN Domain"
+        },
+        "name": "eNodeB - 4562kjsf",
+        "type": "1: RAN Domain",
+        "connected_to": "SECgw 2",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "1Sp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "SECgw 1",
+          "name": "eNodeB - 90lskfjk",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "1: RAN Domain"
+        },
+        "name": "eNodeB - 90lskfjk",
+        "type": "1: RAN Domain",
+        "connected_to": "SECgw 1",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "1ip_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "SECgw 2",
+          "name": "eNodeB - 90lskfjk",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "1: RAN Domain"
+        },
+        "name": "eNodeB - 90lskfjk",
+        "type": "1: RAN Domain",
+        "connected_to": "SECgw 2",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "1yp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "MME",
+          "name": "SECgw 1",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "2: RAN Domain"
+        },
+        "name": "SECgw 1",
+        "type": "2: RAN Domain",
+        "connected_to": "MME",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "2Cp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "S-GW / P-GW",
+          "name": "SECgw 1",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "2: RAN Domain"
+        },
+        "name": "SECgw 1",
+        "type": "2: RAN Domain",
+        "connected_to": "S-GW / P-GW",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "2Sp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "MME",
+          "name": "SECgw 2",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "2: RAN Domain"
+        },
+        "name": "SECgw 2",
+        "type": "2: RAN Domain",
+        "connected_to": "MME",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "2ip_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "S-GW / P-GW",
+          "name": "SECgw 2",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "2: RAN Domain"
+        },
+        "name": "SECgw 2",
+        "type": "2: RAN Domain",
+        "connected_to": "S-GW / P-GW",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "2yp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "S-GW / P-GW",
+          "name": "MME",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "3: EPC Domain"
+        },
+        "name": "MME",
+        "type": "3: EPC Domain",
+        "connected_to": "S-GW / P-GW",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "3Cp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "HSS",
+          "name": "MME",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "3: EPC Domain"
+        },
+        "name": "MME",
+        "type": "3: EPC Domain",
+        "connected_to": "HSS",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "3Sp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "I/S-CSCF",
+          "name": "PCRF",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "4: EPC Domain"
+        },
+        "name": "PCRF",
+        "type": "4: EPC Domain",
+        "connected_to": "I/S-CSCF",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "3ip_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "PCRF",
+          "name": "S-GW / P-GW",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "4: EPC Domain"
+        },
+        "name": "S-GW / P-GW",
+        "type": "4: EPC Domain",
+        "connected_to": "PCRF",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "3yp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "P-CSCF",
+          "name": "S-GW / P-GW",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "4: EPC Domain"
+        },
+        "name": "S-GW / P-GW",
+        "type": "4: EPC Domain",
+        "connected_to": "P-CSCF",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "4Cp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "I/S-CSCF",
+          "name": "HSS",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "4: EPC Domain"
+        },
+        "name": "HSS",
+        "type": "4: EPC Domain",
+        "connected_to": "I/S-CSCF",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "4Sp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "AS",
+          "name": "HSS",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "4: EPC Domain"
+        },
+        "name": "HSS",
+        "type": "4: EPC Domain",
+        "connected_to": "AS",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "4ip_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "I/S-CSCF",
+          "name": "P-CSCF",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "5: IMS Core Domain"
+        },
+        "name": "P-CSCF",
+        "type": "5: IMS Core Domain",
+        "connected_to": "I/S-CSCF",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "4yp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "view": "Logical",
+          "connected_to": "AS",
+          "name": "I/S-CSCF",
+          "service_chain": "VoLTE",
+          "connected_via": "Basic IP",
+          "type": "5: IMS Core Domain"
+        },
+        "name": "I/S-CSCF",
+        "type": "5: IMS Core Domain",
+        "connected_to": "AS",
+        "connected_via": "Basic IP",
+        "size": 1,
+        "service_chain": "VoLTE"
+      },
+      {
+        "_index": "services_volte",
+        "_id": "5Cp_j5UBsugnft_-W3L-",
+        "_score": 1,
+        "_source": {
+          "name": "AS",
+          "service_chain": "VoLTE",
+          "view": "Logical",
+          "type": "5: IMS Core Domain"
+        },
+        "name": "AS",
+        "type": "5: IMS Core Domain",
+        "size": 1,
+        "service_chain": "VoLTE"
+      }
+    ]
+  }
+}
