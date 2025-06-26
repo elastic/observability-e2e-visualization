@@ -1,0 +1,236 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Simple 6 Node Network",
+  "padding": 10,
+  "autosize": {"type": "fit", "contains": "padding"},
+
+  "signals": [
+    {
+      "name": "linkDistance",
+      "value": 250
+    },
+    {
+      "name": "nodeCharge",
+      "value": -1000
+    },
+    {
+      "name": "static",
+      "value": false
+    },
+    {
+      "name": "hoveredDetails",
+      "value": null,
+      "on": [
+        {"events": "@nodes:mouseover", "update": "datum"},
+        {"events": "@nodes:mouseout", "update": "null"}
+      ]
+    },
+    {
+      "name": "width",
+      "update": "containerSize()[0]",
+      "value": 800
+    },
+    {
+      "name": "height",
+      "update": "containerSize()[1]",
+      "value": 600
+    }
+  ],
+  "data": [
+    {
+      "name": "link-data",
+      "values": [
+        {"source": 0, "target": 1},
+        {"source": 0, "target": 2},
+        {"source": 1, "target": 3},
+        {"source": 2, "target": 3},
+        {"source": 3, "target": 4},
+        {"source": 3, "target": 5}
+      ]
+    },
+    {
+      "name": "nodes-data",
+      "values": [
+        {"name": "Service A", "index": 0, "details": [{"key": "KPI1", "value": 98}, {"key": "KPI2", "value": 2.5}]},
+        {"name": "Service B", "index": 1, "details": [{"key": "KPI1", "value": 95}, {"key": "KPI2", "value": 1.8}]},
+        {"name": "Service  asdf sda fasdf C", "index": 2, "details": [{"key": "KPI1", "value": 92}, {"key": "KPI2", "value": 2.1}]},
+        {"name": "Service D", "index": 3, "details": [{"key": "KPI1", "value": 88}, {"key": "KPI2", "value": 0.9}]},
+        {"name": "Service E", "index": 4, "details": [{"key": "KPI1", "value": 85}, {"key": "KPI2", "value": 1.2}]},
+        {"name": "Service F", "index": 5, "details": [{"key": "KPI1", "value": 80}, {"key": "KPI2", "value": 3.0}]}
+      ],
+      "transform": [
+        {
+          "type": "formula",
+          "as": "width",
+          "expr": "length(datum.name) * 8"
+        }
+      ]
+    },
+    {
+      "name": "links",
+      "source": "link-data",
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "nodes-data", 
+          "key": "index",
+          "fields": ["source", "target"],
+          "as": ["sourceNode", "targetNode"]
+        }
+      ]
+    },
+    {
+      "name": "force-nodes",
+      "source": "nodes-data",
+      "transform": [
+        {
+          "type": "force",
+          "iterations": 300,
+          "static": {"signal": "static"},
+          "signal": "force",
+          "forces": [
+            {"force": "center", "x": {"signal": "width / 2"}, "y": {"signal": "height / 2"}},
+            {"force": "collide", "radius": 70},
+            {"force": "nbody", "strength": {"signal": "nodeCharge"}},
+            {"force": "link", "links": "links", "distance": {"signal": "linkDistance"}}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rendered-links",
+      "source": "links",
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "force-nodes", 
+          "key": "index",
+          "fields": ["sourceNode.index", "targetNode.index"],
+          "as": ["sourceForceNode", "targetForceNode"]
+        }
+      ]
+    },
+    {
+      "name": "hovered-node",
+      "source": "force-nodes",
+      "transform": [
+        {"type": "filter", "expr": "hoveredDetails && datum.index === hoveredDetails.index"}
+      ]
+    },
+    {
+      "name": "hovered-details",
+      "transform": [
+        {"type": "filter", "expr": "hoveredDetails != null"},
+        {"type": "flatten", "fields": ["details"]}
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rule",
+      "from": {"data": "rendered-links"},
+      "encode": {
+        "enter": {
+          "stroke": {"value": "#999"},
+          "strokeWidth": {"value": 1}
+        },
+        "update": {
+          "x": {"field": "sourceForceNode.x"},
+          "y": {"field": "sourceForceNode.y"},
+          "x2": {"field": "targetForceNode.x"},
+          "y2": {"field": "targetForceNode.y"}
+        }
+      }
+    },
+    {
+      "type": "group",
+      "name": "nodes",
+      "from": {"data": "force-nodes"},
+      "encode": {
+        "enter": {
+          "width": {"field": "width", "offset": 20},
+          "height": {"value": 32},
+          "fill": {"value": "white"},
+          "stroke": {"value": "steelblue"},
+          "strokeWidth": {"value": 1},
+          "cornerRadius": {"value": 3},
+          "cursor": {"value": "pointer"}
+        },
+        "update": {
+          "xc": {"field": "x"},
+          "yc": {"field": "y"}
+        }
+      },
+      "signals": [
+        {
+          "name": "hoveredDetails",
+          "on": [
+            {"events": "mouseover", "update": "datum"},
+            {"events": "mouseout", "update": "null"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "from": {"data": "force-nodes"},
+      "encode": {
+        "enter": {
+          "text": {"field": "name"},
+          "fontSize": {"value": 12},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fill": {"value": "steelblue"},
+          "fontWeight": {"value": "bold"}
+        },
+        "update": {
+          "x": {"field": "x"},
+          "y": {"field": "y"}
+        }
+      }
+    },
+    {
+      "type": "group",
+      "name": "details-group",
+      "from": {"data": "hovered-node"},
+      "encode": {
+        "update": {
+          "x": {"signal": "datum.x + 20"},
+          "y": {"signal": "datum.y - 20"},
+          "opacity": {"signal": "hoveredDetails ? 1 : 0"}
+        }
+      },
+      "marks": [
+        {
+          "type": "rect",
+          "encode": {
+            "enter": {
+              "width": {"value": 120},
+              "height": {"value": 60},
+              "fill": {"value": "white"},
+              "stroke": {"value": "black"},
+              "cornerRadius": {"value": 5}
+            }
+          }
+        },
+        {
+          "type": "text",
+          "from": {"data": "hovered-details"},
+          "encode": {
+            "enter": {
+              "text": {"signal": "datum.key + ': ' + datum.value"},
+              "fontSize": {"value": 10},
+              "align": {"value": "left"},
+              "baseline": {"value": "top"},
+              "fill": {"signal": "datum.value > 50 ? 'green' : 'red'"}
+            },
+            "update": {
+              "x": {"value": 10},
+              "y": {"signal": "10 + datum.index * 15"}
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
