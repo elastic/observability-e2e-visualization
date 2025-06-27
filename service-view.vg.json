@@ -7,11 +7,11 @@
   "signals": [
     {
       "name": "linkDistance",
-      "value": 250
+      "value": 150
     },
     {
       "name": "nodeCharge",
-      "value": -1000
+      "value": -500
     },
     {
       "name": "static",
@@ -22,7 +22,9 @@
       "value": null,
       "on": [
         {"events": "@nodes:mouseover", "update": "datum"},
-        {"events": "@nodes:mouseout", "update": "null"}
+        {"events": "@nodes:mouseout", "update": "null"},
+        {"events": "@node-labels:mouseover", "update": "datum"},
+        {"events": "@node-labels:mouseout", "update": "null"}
       ]
     },
     {
@@ -119,9 +121,9 @@
     },
     {
       "name": "hovered-details",
+      "source": "hovered-node",
       "transform": [
-        {"type": "filter", "expr": "hoveredDetails != null"},
-        {"type": "flatten", "fields": ["details"]}
+        {"type": "flatten", "fields": ["details"], "as": ["detail"]}
       ]
     }
   ],
@@ -160,19 +162,11 @@
           "xc": {"field": "x"},
           "yc": {"field": "y"}
         }
-      },
-      "signals": [
-        {
-          "name": "hoveredDetails",
-          "on": [
-            {"events": "mouseover", "update": "datum"},
-            {"events": "mouseout", "update": "null"}
-          ]
-        }
-      ]
+      }
     },
     {
       "type": "text",
+      "name": "node-labels",
       "from": {"data": "force-nodes"},
       "encode": {
         "enter": {
@@ -181,7 +175,8 @@
           "align": {"value": "center"},
           "baseline": {"value": "middle"},
           "fill": {"value": "steelblue"},
-          "fontWeight": {"value": "bold"}
+          "fontWeight": {"value": "bold"},
+          "cursor": {"value": "pointer"}
         },
         "update": {
           "x": {"field": "x"},
@@ -205,11 +200,15 @@
           "type": "rect",
           "encode": {
             "enter": {
-              "width": {"value": 120},
-              "height": {"value": 60},
               "fill": {"value": "white"},
               "stroke": {"value": "black"},
-              "cornerRadius": {"value": 5}
+              "cornerRadius": {"value": 5},
+              "x": {"value": 0},
+              "y": {"value": 0}
+            },
+            "update": {
+              "width": {"value": 120},
+              "height": {"signal": "datum.details.length * 15 + 20"}
             }
           }
         },
@@ -218,15 +217,15 @@
           "from": {"data": "hovered-details"},
           "encode": {
             "enter": {
-              "text": {"signal": "datum.key + ': ' + datum.value"},
               "fontSize": {"value": 10},
               "align": {"value": "left"},
-              "baseline": {"value": "top"},
-              "fill": {"signal": "datum.value > 50 ? 'green' : 'red'"}
+              "baseline": {"value": "top"}
             },
             "update": {
               "x": {"value": 10},
-              "y": {"signal": "10 + datum.index * 15"}
+              "y": {"signal": "10 + datum.index * 15"},
+              "text": {"signal": "datum.detail.key + ': ' + datum.detail.value"},
+              "fill": {"signal": "datum.detail.value > 50 ? 'green' : 'red'"}
             }
           }
         }
