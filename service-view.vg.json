@@ -53,12 +53,12 @@
     {
       "name": "nodes-data",
       "values": [
-        {"name": "Service A", "index": 0, "details": [{"key": "KPI1", "value": 98}, {"key": "KPI2", "value": 2.5}]},
-        {"name": "Service B", "index": 1, "details": [{"key": "KPI1", "value": 95}, {"key": "KPI2", "value": 1.8}]},
-        {"name": "Service  asdf sda fasdf C", "index": 2, "details": [{"key": "KPI1", "value": 92}, {"key": "KPI2", "value": 2.1}]},
-        {"name": "Service D", "index": 3, "details": [{"key": "KPI1", "value": 88}, {"key": "KPI2", "value": 0.9}]},
-        {"name": "Service E", "index": 4, "details": [{"key": "KPI1", "value": 85}, {"key": "KPI2", "value": 1.2}]},
-        {"name": "Service F", "index": 5, "details": [{"key": "KPI1", "value": 80}, {"key": "KPI2", "value": 3.0}]}
+        {"name": "Service A", "index": 0, "details": [{"key": "KPI1", "value": 98, "color": "green"}, {"key": "KPI2", "value": 2.5, "color": "green"}, {"key": "Uptime", "value": 99.9, "color": "green"}, {"key": "Errors", "value": 0.01, "color": "green"}]},
+        {"name": "Service B", "index": 1, "details": [{"key": "KPI1", "value": 95, "color": "green"}, {"key": "KPI2", "value": 1.8, "color": "green"}, {"key": "Uptime", "value": 99.5, "color": "green"}, {"key": "Errors", "value": 0.05, "color": "green"}]},
+        {"name": "Service  asdf sda fasdf C", "index": 2, "details": [{"key": "KPI1", "value": 92, "color": "green"}, {"key": "KPI2", "value": 2.1, "color": "green"}, {"key": "Uptime", "value": 98.2, "color": "green"}, {"key": "Errors", "value": 0.12, "color": "orange"}]},
+        {"name": "Service D", "index": 3, "details": [{"key": "KPI1", "value": 88, "color": "orange"}, {"key": "KPI2", "value": 0.9, "color": "green"}, {"key": "Uptime", "value": 97.8, "color": "orange"}, {"key": "Errors", "value": 0.22, "color": "orange"}]},
+        {"name": "Service E", "index": 4, "details": [{"key": "KPI1", "value": 85, "color": "orange"}, {"key": "KPI2", "value": 1.2, "color": "green"}, {"key": "Uptime", "value": 96.5, "color": "orange"}, {"key": "Errors", "value": 0.35, "color": "red"}]},
+        {"name": "Service F", "index": 5, "details": [{"key": "KPI1", "value": 80, "color": "orange"}, {"key": "KPI2", "value": 3.0, "color": "red"}, {"key": "Uptime", "value": 94.2, "color": "orange"}, {"key": "Errors", "value": 0.48, "color": "red"}]}
       ],
       "transform": [
         {
@@ -195,6 +195,7 @@
           "opacity": {"signal": "hoveredDetails ? 1 : 0"}
         }
       },
+      
       "marks": [
         {
           "type": "rect",
@@ -203,12 +204,12 @@
               "fill": {"value": "white"},
               "stroke": {"value": "black"},
               "cornerRadius": {"value": 5},
-              "x": {"value": 0},
-              "y": {"value": 0}
+              "width": {"value": 120},
+              "height": {"value": 60}
             },
             "update": {
-              "width": {"value": 120},
-              "height": {"signal": "datum.details.length * 15 + 20"}
+              "width": {"signal": "datum && datum.name ? (length(datum.name) * 8 + 40) : 120"},
+              "height": {"signal": "datum && datum.details ? datum.details.length * 15 + 20 : 80"}
             }
           }
         },
@@ -223,9 +224,9 @@
             },
             "update": {
               "x": {"value": 10},
-              "y": {"signal": "10 + datum.index * 15"},
+              "y": {"signal": "10 + indexof(parent.details, datum.detail) * 15"},
               "text": {"signal": "datum.detail.key + ': ' + datum.detail.value"},
-              "fill": {"signal": "datum.detail.value > 50 ? 'green' : 'red'"}
+              "fill": {"field": "detail.color"}
             }
           }
         }
