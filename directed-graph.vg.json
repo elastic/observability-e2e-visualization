@@ -1,11 +1,112 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Dataviz by David Bacci: https://www.linkedin.com/in/davbacci/",
+  "description": "Elastic E2E view",
   "width": 1400,
   "height": 800,
   "padding": {"left": 0, "right": 0, "top": 0, "bottom": 0},
   "autosize": "pad",
   "background": "#f4f7ff",
+    "data": [
+    {
+      "name": "link-data-raw",
+      "url": "https://raw.githubusercontent.com/elastic/observability-e2e-visualization/refs/heads/main/data/data.json",
+      "format": {"type": "json", "property": "links"}
+    },
+    {"name": "link-data", "source": "link-data-raw"},
+    {
+      "name": "source-connections",
+      "source": "link-data-raw",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["source"],
+          "ops": ["values"],
+          "fields": ["target"],
+          "as": ["connections"]
+        },
+        {
+          "type": "formula",
+          "as": "targets",
+          "expr": "pluck(datum.connections, 'target')"
+        }
+      ]
+    },
+    {
+      "name": "target-connections",
+      "source": "link-data-raw",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["target"],
+          "ops": ["values"],
+          "fields": ["source"],
+          "as": ["connections"]
+        },
+        {
+          "type": "formula",
+          "as": "sources",
+          "expr": "pluck(datum.connections, 'source')"
+        }
+      ]
+    },
+    {
+      "name": "node-data",
+      "url": "https://raw.githubusercontent.com/elastic/observability-e2e-visualization/refs/heads/main/data/data.json",
+      "format": {"type": "json", "property": "nodes"},
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "source-connections",
+          "key": "source",
+          "fields": ["name"],
+          "values": ["targets"],
+          "as": ["targets"],
+          "default": [""]
+        },
+        {
+          "type": "lookup",
+          "from": "target-connections",
+          "key": "target",
+          "fields": ["name"],
+          "values": ["sources"],
+          "as": ["sources"],
+          "default": [""]
+        },
+        {
+          "type": "force",
+          "iterations": 300,
+          "restart": {"signal": "restart"},
+          "signal": "force",
+          "forces": [
+            {"force": "center", "x": {"signal": "cx"}, "y": {"signal": "cy"}},
+            {
+              "force": "collide",
+              "radius": {"signal": "sqrt(4 * nodeRadius * nodeRadius)"},
+              "iterations": 1,
+              "strength": 0.7
+            },
+            {"force": "nbody", "strength": {"signal": "nodeCharge"}},
+            {
+              "force": "link",
+              "links": "link-data-raw",
+              "distance": {"signal": "linkDistance"},
+              "id": "name"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "as": "fx",
+          "expr": "fix[0]!=null && node==datum.index ?invert('xscale',fix[0]):null"
+        },
+        {
+          "type": "formula",
+          "as": "fy",
+          "expr": "fix[1]!=null && node==datum.index ?invert('yscale',fix[1]):null"
+        }
+      ]
+    }
+  ],
   "signals": [
     {"name": "xrange", "update": "[0, width]"},
     {"name": "yrange", "update": "[height, 0]"},
@@ -232,107 +333,6 @@
       "on": [{"events": {"signal": "fix"}, "update": "fix && fix.length"}]
     }
   ],
-  "data": [
-    {
-      "name": "link-data-raw",
-      "url": "https://raw.githubusercontent.com/PBI-David/Deneb-Showcase/main/Force%20Directed%20Graph/data.json",
-      "format": {"type": "json", "property": "links"}
-    },
-    {"name": "link-data", "source": "link-data-raw"},
-    {
-      "name": "source-connections",
-      "source": "link-data-raw",
-      "transform": [
-        {
-          "type": "aggregate",
-          "groupby": ["source"],
-          "ops": ["values"],
-          "fields": ["target"],
-          "as": ["connections"]
-        },
-        {
-          "type": "formula",
-          "as": "targets",
-          "expr": "pluck(datum.connections, 'target')"
-        }
-      ]
-    },
-    {
-      "name": "target-connections",
-      "source": "link-data-raw",
-      "transform": [
-        {
-          "type": "aggregate",
-          "groupby": ["target"],
-          "ops": ["values"],
-          "fields": ["source"],
-          "as": ["connections"]
-        },
-        {
-          "type": "formula",
-          "as": "sources",
-          "expr": "pluck(datum.connections, 'source')"
-        }
-      ]
-    },
-    {
-      "name": "node-data",
-      "url": "https://raw.githubusercontent.com/PBI-David/Deneb-Showcase/main/Force%20Directed%20Graph/data.json",
-      "format": {"type": "json", "property": "nodes"},
-      "transform": [
-        {
-          "type": "lookup",
-          "from": "source-connections",
-          "key": "source",
-          "fields": ["name"],
-          "values": ["targets"],
-          "as": ["targets"],
-          "default": [""]
-        },
-        {
-          "type": "lookup",
-          "from": "target-connections",
-          "key": "target",
-          "fields": ["name"],
-          "values": ["sources"],
-          "as": ["sources"],
-          "default": [""]
-        },
-        {
-          "type": "force",
-          "iterations": 300,
-          "restart": {"signal": "restart"},
-          "signal": "force",
-          "forces": [
-            {"force": "center", "x": {"signal": "cx"}, "y": {"signal": "cy"}},
-            {
-              "force": "collide",
-              "radius": {"signal": "sqrt(4 * nodeRadius * nodeRadius)"},
-              "iterations": 1,
-              "strength": 0.7
-            },
-            {"force": "nbody", "strength": {"signal": "nodeCharge"}},
-            {
-              "force": "link",
-              "links": "link-data-raw",
-              "distance": {"signal": "linkDistance"},
-              "id": "name"
-            }
-          ]
-        },
-        {
-          "type": "formula",
-          "as": "fx",
-          "expr": "fix[0]!=null && node==datum.index ?invert('xscale',fix[0]):null"
-        },
-        {
-          "type": "formula",
-          "as": "fy",
-          "expr": "fix[1]!=null && node==datum.index ?invert('yscale',fix[1]):null"
-        }
-      ]
-    }
-  ],
   "scales": [
     {
       "name": "color",
@@ -488,7 +488,7 @@
       "data": [{}],
       "encode": {
         "update": {
-          "text": {"value": ["Dataviz: David Bacci"]},
+          "text": {"value": ["Elastic"]},
           "align": {"value": "left"},
           "lineHeight": {"value": 16},
           "fill": {"value": "#595959"},
