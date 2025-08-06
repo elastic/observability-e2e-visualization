@@ -1,0 +1,25 @@
+{
+  "name": "observability-e2e-visualization",
+  "version": "1.0.0",
+  "description": "vega files to be used for e2e observability diagrams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elastic/observability-e2e-visualization.git"
+  },
+  "keywords": [
+    "vega"
+  ],
+  "author": "waldemar.schaefer@elastic.coastic.co",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elastic/observability-e2e-visualization/issues"
+  },
+  "homepage": "https://github.com/elastic/observability-e2e-visualization#readme",
+  "dependencies": {
+    "vega": "^6.1.2"
+  }
+}

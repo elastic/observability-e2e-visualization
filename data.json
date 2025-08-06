@@ -1,0 +1,988 @@
+{"nodes":[{"name": "Ledger+", "group": "Accounting", "details": [{"key": "KPI1", "value": 95.2, "color": "green"}, {"key": "KPI2", "value": 8.7, "color": "green"}, {"key": "Uptime", "value": 99.7, "color": "green"}, {"key": "Errors", "value": 0.02, "color": "green"}], "borderColor": "green"},
+        {"name": "ConnectEase", "group": "Customer", "details": [{"key": "KPI1", "value": 88.5, "color": "green"}, {"key": "KPI2", "value": 7.6, "color": "green"}, {"key": "Uptime", "value": 98.8, "color": "green"}, {"key": "Errors", "value": 0.12, "color": "green"}], "borderColor": "green"},
+        {"name": "SinteractPro", "group": "Customer", "details": [{"key": "KPI1", "value": 92.3, "color": "green"}, {"key": "KPI2", "value": 8.1, "color": "green"}, {"key": "Uptime", "value": 99.2, "color": "green"}, {"key": "Errors", "value": 0.08, "color": "green"}], "borderColor": "green"},
+        {"name": "PayRoller", "group": "Accounting", "details": [{"key": "KPI1", "value": 78.4, "color": "orange"}, {"key": "KPI2", "value": 6.2, "color": "orange"}, {"key": "Uptime", "value": 94.5, "color": "green"}, {"key": "Errors", "value": 0.45, "color": "green"}], "borderColor": "orange"},
+        {"name": "CashFlowX", "group": "Accounting", "details": [{"key": "KPI1", "value": 89.7, "color": "green"}, {"key": "KPI2", "value": 7.8, "color": "green"}, {"key": "Uptime", "value": 98.3, "color": "green"}, {"key": "Errors", "value": 0.21, "color": "green"}], "borderColor": "green"},
+        {"name": "BookKeepPro", "group": "Accounting", "details": [{"key": "KPI1", "value": 91.5, "color": "green"}, {"key": "KPI2", "value": 8.2, "color": "green"}, {"key": "Uptime", "value": 99.1, "color": "green"}, {"key": "Errors", "value": 0.09, "color": "green"}], "borderColor": "green"},
+        {"name": "TaxTrack", "group": "Accounting", "details": [{"key": "KPI1", "value": 87.2, "color": "green"}, {"key": "KPI2", "value": 7.4, "color": "green"}, {"key": "Uptime", "value": 97.8, "color": "green"}, {"key": "Errors", "value": 0.32, "color": "green"}], "borderColor": "green"},
+        {"name": "AuditWise", "group": "Accounting", "details": [{"key": "KPI1", "value": 93.8, "color": "green"}, {"key": "KPI2", "value": 8.5, "color": "green"}, {"key": "Uptime", "value": 99.5, "color": "green"}, {"key": "Errors", "value": 0.04, "color": "green"}], "borderColor": "green"},
+        {"name": "ExpenseEZ", "group": "Accounting", "details": [{"key": "KPI1", "value": 85.6, "color": "green"}, {"key": "KPI2", "value": 7.1, "color": "green"}, {"key": "Uptime", "value": 97.1, "color": "green"}, {"key": "Errors", "value": 0.39, "color": "green"}], "borderColor": "green"},
+        {"name": "ProfitMax", "group": "Accounting", "details": [{"key": "KPI1", "value": 96.4, "color": "green"}, {"key": "KPI2", "value": 8.9, "color": "green"}, {"key": "Uptime", "value": 99.8, "color": "green"}, {"key": "Errors", "value": 0.01, "color": "green"}], "borderColor": "green"},
+        {"name": "BudgetMate", "group": "Accounting", "details": [{"key": "KPI1", "value": 83.5, "color": "green"}, {"key": "KPI2", "value": 6.7, "color": "orange"}, {"key": "Uptime", "value": 96.4, "color": "green"}, {"key": "Errors", "value": 0.47, "color": "green"}], "borderColor": "orange"},
+        {"name": "BinvoiceGen", "group": "Accounting", "details": [{"key": "KPI1", "value": 90.8, "color": "green"}, {"key": "KPI2", "value": 7.9, "color": "green"}, {"key": "Uptime", "value": 98.7, "color": "green"}, {"key": "Errors", "value": 0.18, "color": "green"}], "borderColor": "green"},
+        {"name": "AssetValu", "group": "Accounting", "details": [{"key": "KPI1", "value": 84.2, "color": "green"}, {"key": "KPI2", "value": 6.9, "color": "orange"}, {"key": "Uptime", "value": 96.8, "color": "green"}, {"key": "Errors", "value": 0.42, "color": "green"}], "borderColor": "orange"},
+        {"name": "VATMaster", "group": "Accounting", "details": [{"key": "KPI1", "value": 92.1, "color": "green"}, {"key": "KPI2", "value": 8.2, "color": "green"}, {"key": "Uptime", "value": 99.1, "color": "green"}, {"key": "Errors", "value": 0.11, "color": "green"}], "borderColor": "green"},
+        {"name": "LedgerLite", "group": "Accounting", "details": [{"key": "KPI1", "value": 88.7, "color": "green"}, {"key": "KPI2", "value": 7.5, "color": "green"}, {"key": "Uptime", "value": 97.9, "color": "green"}, {"key": "Errors", "value": 0.28, "color": "green"}], "borderColor": "green"},
+        {"name": "PayTrack", "group": "Accounting", "details": [{"key": "KPI1", "value": 94.3, "color": "green"}, {"key": "KPI2", "value": 8.6, "color": "green"}, {"key": "Uptime", "value": 99.4, "color": "green"}, {"key": "Errors", "value": 0.07, "color": "green"}], "borderColor": "green"},
+        {"name": "CashBooker", "group": "Accounting", "details": [{"key": "KPI1", "value": 81.4, "color": "green"}, {"key": "KPI2", "value": 6.4, "color": "orange"}, {"key": "Uptime", "value": 95.2, "color": "green"}, {"key": "Errors", "value": 0.63, "color": "green"}], "borderColor": "orange"},
+        {"name": "AuditGuard", "group": "Accounting", "details": [{"key": "KPI1", "value": 97.8, "color": "green"}, {"key": "KPI2", "value": 9.2, "color": "green"}, {"key": "Uptime", "value": 99.9, "color": "green"}, {"key": "Errors", "value": 0.01, "color": "green"}], "borderColor": "green"},
+        {"name": "PowerBI", "group": "Reporting", "details": [{"key": "KPI1", "value": 93.5, "color": "green"}, {"key": "KPI2", "value": 8.4, "color": "green"}, {"key": "Uptime", "value": 99.3, "color": "green"}, {"key": "Errors", "value": 0.08, "color": "green"}], "borderColor": "green"},
+        {"name": "Tableau", "group": "Reporting", "details": [{"key": "KPI1", "value": 91.7, "color": "green"}, {"key": "KPI2", "value": 8.0, "color": "green"}, {"key": "Uptime", "value": 98.9, "color": "green"}, {"key": "Errors", "value": 0.15, "color": "green"}], "borderColor": "green"},
+        {"name": "QlikView", "group": "Reporting", "details": [{"key": "KPI1", "value": 89.3, "color": "green"}, {"key": "KPI2", "value": 7.7, "color": "green"}, {"key": "Uptime", "value": 98.2, "color": "green"}, {"key": "Errors", "value": 0.22, "color": "green"}], "borderColor": "green"},
+        {"name": "Looker", "group": "Reporting", "details": [{"key": "KPI1", "value": 94.8, "color": "green"}, {"key": "KPI2", "value": 8.8, "color": "green"}, {"key": "Uptime", "value": 99.6, "color": "green"}, {"key": "Errors", "value": 0.03, "color": "green"}], "borderColor": "green"},
+        {"name": "Sisense", "group": "Reporting", "details": [{"key": "KPI1", "value": 86.9, "color": "green"}, {"key": "KPI2", "value": 7.2, "color": "green"}, {"key": "Uptime", "value": 97.5, "color": "green"}, {"key": "Errors", "value": 0.34, "color": "green"}], "borderColor": "green"},
+        {"name": "MicroStrategy", "group": "Reporting", "details": [{"key": "KPI1", "value": 96.1, "color": "green"}, {"key": "KPI2", "value": 8.9, "color": "green"}, {"key": "Uptime", "value": 99.7, "color": "green"}, {"key": "Errors", "value": 0.02, "color": "green"}], "borderColor": "green"},
+        {"name": "Cognos Analytics", "group": "Reporting", "details": [{"key": "KPI1", "value": 92.5, "color": "green"}, {"key": "KPI2", "value": 8.3, "color": "green"}, {"key": "Uptime", "value": 99.2, "color": "green"}, {"key": "Errors", "value": 0.09, "color": "green"}], "borderColor": "green"},
+        {"name": "Yellowfin", "group": "Reporting", "details": [{"key": "KPI1", "value": 85.3, "color": "green"}, {"key": "KPI2", "value": 7.0, "color": "green"}, {"key": "Uptime", "value": 96.9, "color": "green"}, {"key": "Errors", "value": 0.41, "color": "green"}], "borderColor": "green"},
+        {"name": "Domo", "group": "Reporting", "details": [{"key": "KPI1", "value": 97.2, "color": "green"}, {"key": "KPI2", "value": 9.1, "color": "green"}, {"key": "Uptime", "value": 99.8, "color": "green"}, {"key": "Errors", "value": 0.01, "color": "green"}], "borderColor": "green"},
+        {"name": "Pentaho", "group": "Reporting", "details": [{"key": "KPI1", "value": 82.8, "color": "green"}, {"key": "KPI2", "value": 6.6, "color": "orange"}, {"key": "Uptime", "value": 95.7, "color": "green"}, {"key": "Errors", "value": 0.58, "color": "green"}], "borderColor": "orange"},
+        {"name": "Birst", "group": "Reporting", "details": [{"key": "KPI1", "value": 90.4, "color": "green"}, {"key": "KPI2", "value": 7.8, "color": "green"}, {"key": "Uptime", "value": 98.5, "color": "green"}, {"key": "Errors", "value": 0.19, "color": "green"}], "borderColor": "green"},
+        {"name": "Periscope Data", "group": "Reporting", "details": [{"key": "KPI1", "value": 88.1, "color": "green"}, {"key": "KPI2", "value": 7.4, "color": "green"}, {"key": "Uptime", "value": 97.7, "color": "green"}, {"key": "Errors", "value": 0.31, "color": "green"}], "borderColor": "green"},
+        {"name": "Zoho Analytics", "group": "Reporting", "details": [{"key": "KPI1", "value": 87.6, "color": "green"}, {"key": "KPI2", "value": 7.3, "color": "green"}, {"key": "Uptime", "value": 97.6, "color": "green"}, {"key": "Errors", "value": 0.32, "color": "green"}], "borderColor": "green"},
+        {"name": "GoodData", "group": "Reporting", "details": [{"key": "KPI1", "value": 91.2, "color": "green"}, {"key": "KPI2", "value": 8.1, "color": "green"}, {"key": "Uptime", "value": 99.0, "color": "green"}, {"key": "Errors", "value": 0.12, "color": "green"}], "borderColor": "green"},
+        {"name": "Microsoft SSRS", "group": "Reporting", "details": [{"key": "KPI1", "value": 86.4, "color": "green"}, {"key": "KPI2", "value": 7.1, "color": "green"}, {"key": "Uptime", "value": 97.3, "color": "green"}, {"key": "Errors", "value": 0.37, "color": "green"}], "borderColor": "green"},
+        {"name": "Oracle Analytics Cloud", "group": "Reporting", "details": [{"key": "KPI1", "value": 95.7, "color": "green"}, {"key": "KPI2", "value": 8.9, "color": "green"}, {"key": "Uptime", "value": 99.6, "color": "green"}, {"key": "Errors", "value": 0.04, "color": "green"}], "borderColor": "green"},
+        {"name": "SAP BusinessObjects", "group": "Reporting", "details": [{"key": "KPI1", "value": 90.2, "color": "green"}, {"key": "KPI2", "value": 7.9, "color": "green"}, {"key": "Uptime", "value": 98.4, "color": "green"}, {"key": "Errors", "value": 0.21, "color": "green"}], "borderColor": "green"},
+        {"name": "Cognos TM1", "group": "Reporting", "details": [{"key": "KPI1", "value": 83.1, "color": "green"}, {"key": "KPI2", "value": 6.7, "color": "orange"}, {"key": "Uptime", "value": 95.9, "color": "green"}, {"key": "Errors", "value": 0.53, "color": "green"}], "borderColor": "orange"},
+        {"name": "Google Data Studio", "group": "Reporting", "details": [{"key": "KPI1", "value": 96.9, "color": "green"}, {"key": "KPI2", "value": 9.0, "color": "green"}, {"key": "Uptime", "value": 99.8, "color": "green"}, {"key": "Errors", "value": 0.01, "color": "green"}], "borderColor": "green"},
+        {"name": "CDA", "group": "Banking", "details": [{"key": "KPI1", "value": 92.8, "color": "green"}, {"key": "KPI2", "value": 8.4, "color": "green"}, {"key": "Uptime", "value": 99.2, "color": "green"}, {"key": "Errors", "value": 0.08, "color": "green"}], "borderColor": "green"},
+        {"name": "ATM-X", "group": "Banking", "details": [{"key": "KPI1", "value": 79.5, "color": "orange"}, {"key": "KPI2", "value": 6.1, "color": "orange"}, {"key": "Uptime", "value": 94.2, "color": "green"}, {"key": "Errors", "value": 0.72, "color": "green"}], "borderColor": "orange"},
+        {"name": "CBS-Pro", "group": "Banking", "details": [{"key": "KPI1", "value": 93.6, "color": "green"}, {"key": "KPI2", "value": 8.5, "color": "green"}, {"key": "Uptime", "value": 99.3, "color": "green"}, {"key": "Errors", "value": 0.07, "color": "green"}], "borderColor": "green"},
+        {"name": "EFT-Core", "group": "Banking", "details": [{"key": "KPI1", "value": 89.8, "color": "green"}, {"key": "KPI2", "value": 7.8, "color": "green"}, {"key": "Uptime", "value": 98.1, "color": "green"}, {"key": "Errors", "value": 0.25, "color": "green"}], "borderColor": "green"},
+        {"name": "KYC-Master", "group": "Banking", "details": [{"key": "KPI1", "value": 97.4, "color": "green"}, {"key": "KPI2", "value": 9.2, "color": "green"}, {"key": "Uptime", "value": 99.9, "color": "green"}, {"key": "Errors", "value": 0.01, "color": "green"}], "borderColor": "green"},
+        {"name": "AML-Secure", "group": "Banking", "details": [{"key": "KPI1", "value": 98.1, "color": "green"}, {"key": "KPI2", "value": 9.4, "color": "green"}, {"key": "Uptime", "value": 99.9, "color": "green"}, {"key": "Errors", "value": 0.01, "color": "green"}], "borderColor": "green"},
+        {"name": "SWIFT-Net", "group": "Banking", "details": [{"key": "KPI1", "value": 94.9, "color": "green"}, {"key": "KPI2", "value": 8.7, "color": "green"}, {"key": "Uptime", "value": 99.5, "color": "green"}, {"key": "Errors", "value": 0.05, "color": "green"}], "borderColor": "green"},
+        {"name": "RTGS-Plus", "group": "Banking", "details": [{"key": "KPI1", "value": 96.3, "color": "green"}, {"key": "KPI2", "value": 9.0, "color": "green"}, {"key": "Uptime", "value": 99.7, "color": "green"}, {"key": "Errors", "value": 0.03, "color": "green"}], "borderColor": "green"},
+        {"name": "FDX-Elite", "group": "Banking", "details": [{"key": "KPI1", "value": 91.5, "color": "green"}, {"key": "KPI2", "value": 8.2, "color": "green"}, {"key": "Uptime", "value": 99.0, "color": "green"}, {"key": "Errors", "value": 0.13, "color": "green"}], "borderColor": "green"},
+        {"name": "Loans-360", "group": "Banking", "details": [{"key": "KPI1", "value": 88.3, "color": "green"}, {"key": "KPI2", "value": 7.5, "color": "green"}, {"key": "Uptime", "value": 97.8, "color": "green"}, {"key": "Errors", "value": 0.29, "color": "green"}], "borderColor": "green"},
+        {"name": "CRM-Fusion", "group": "Banking", "details": [{"key": "KPI1", "value": 85.7, "color": "green"}, {"key": "KPI2", "value": 7.1, "color": "green"}, {"key": "Uptime", "value": 97.2, "color": "green"}, {"key": "Errors", "value": 0.38, "color": "green"}], "borderColor": "green"},
+        {"name": "MBS-Optima", "group": "Banking", "details": [{"key": "KPI1", "value": 87.2, "color": "green"}, {"key": "KPI2", "value": 7.3, "color": "green"}, {"key": "Uptime", "value": 97.6, "color": "green"}, {"key": "Errors", "value": 0.33, "color": "green"}], "borderColor": "green"},
+        {"name": "FMS-Prime", "group": "Banking", "details": [{"key": "KPI1", "value": 90.8, "color": "green"}, {"key": "KPI2", "value": 8.0, "color": "green"}, {"key": "Uptime", "value": 98.7, "color": "green"}, {"key": "Errors", "value": 0.17, "color": "green"}], "borderColor": "green"},
+        {"name": "P2P-Gateway", "group": "Banking", "details": [{"key": "KPI1", "value": 84.3, "color": "green"}, {"key": "KPI2", "value": 6.9, "color": "orange"}, {"key": "Uptime", "value": 96.5, "color": "green"}, {"key": "Errors", "value": 0.49, "color": "green"}], "borderColor": "orange"},
+        {"name": "RDC-Express", "group": "Banking", "details": [{"key": "KPI1", "value": 76.2, "color": "orange"}, {"key": "KPI2", "value": 5.8, "color": "orange"}, {"key": "Uptime", "value": 91.9, "color": "green"}, {"key": "Errors", "value": 1.15, "color": "orange"}], "borderColor": "orange"},
+        {"name": "ACH-Secure", "group": "Banking", "details": [{"key": "KPI1", "value": 92.7, "color": "green"}, {"key": "KPI2", "value": 8.3, "color": "green"}, {"key": "Uptime", "value": 99.1, "color": "green"}, {"key": "Errors", "value": 0.10, "color": "green"}], "borderColor": "green"},
+        {"name": "POS-Master", "group": "Banking", "details": [{"key": "KPI1", "value": 82.1, "color": "green"}, {"key": "KPI2", "value": 6.5, "color": "orange"}, {"key": "Uptime", "value": 95.3, "color": "green"}, {"key": "Errors", "value": 0.61, "color": "green"}], "borderColor": "orange"},
+        {"name": "AB-Mobile", "group": "Banking", "details": [{"key": "KPI1", "value": 81.5, "color": "green"}, {"key": "KPI2", "value": 6.4, "color": "orange"}, {"key": "Uptime", "value": 94.8, "color": "green"}, {"key": "Errors", "value": 0.68, "color": "green"}], "borderColor": "orange"},
+        {"name": "CustCare-Plus", "group": "Banking", "details": [{"key": "KPI1", "value": 88.9, "color": "green"}, {"key": "KPI2", "value": 7.6, "color": "green"}, {"key": "Uptime", "value": 98.0, "color": "green"}, {"key": "Errors", "value": 0.27, "color": "green"}], "borderColor": "green"},
+        {"name": "LMS-Elite", "group": "Banking", "details": [{"key": "KPI1", "value": 86.1, "color": "green"}, {"key": "KPI2", "value": 7.2, "color": "green"}, {"key": "Uptime", "value": 97.3, "color": "green"}, {"key": "Errors", "value": 0.36, "color": "green"}], "borderColor": "green"},
+        {"name": "CustHub", "group": "Customer", "details": [{"key": "KPI1", "value": 91.9, "color": "green"}, {"key": "KPI2", "value": 8.2, "color": "green"}, {"key": "Uptime", "value": 99.0, "color": "green"}, {"key": "Errors", "value": 0.13, "color": "green"}], "borderColor": "green"},
+        {"name": "ProfileM", "group": "Customer", "details": [{"key": "KPI1", "value": 89.6, "color": "green"}, {"key": "KPI2", "value": 7.8, "color": "green"}, {"key": "Uptime", "value": 98.2, "color": "green"}, {"key": "Errors", "value": 0.23, "color": "green"}], "borderColor": "green"},
+        {"name": "AddrPro", "group": "Customer", "details": [{"key": "KPI1", "value": 87.5, "color": "green"}, {"key": "KPI2", "value": 7.3, "color": "green"}, {"key": "Uptime", "value": 97.7, "color": "green"}, {"key": "Errors", "value": 0.31, "color": "green"}], "borderColor": "green"},
+        {"name": "Contact360", "group": "Customer", "details": [{"key": "KPI1", "value": 85.4, "color": "green"}, {"key": "KPI2", "value": 7.0, "color": "green"}, {"key": "Uptime", "value": 97.0, "color": "green"}, {"key": "Errors", "value": 0.39, "color": "green"}], "borderColor": "green"},
+        {"name": "CustEngage", "group": "Customer", "details": [{"key": "KPI1", "value": 90.3, "color": "green"}, {"key": "KPI2", "value": 7.9, "color": "green"}, {"key": "Uptime", "value": 98.5, "color": "green"}, {"key": "Errors", "value": 0.20, "color": "green"}], "borderColor": "green"},
+        {"name": "SurveyX", "group": "Customer", "details": [{"key": "KPI1", "value": 83.7, "color": "green"}, {"key": "KPI2", "value": 6.8, "color": "orange"}, {"key": "Uptime", "value": 96.1, "color": "green"}, {"key": "Errors", "value": 0.51, "color": "green"}], "borderColor": "orange"},
+        {"name": "EngageMate", "group": "Customer", "details": [{"key": "KPI1", "value": 92.1, "color": "green"}, {"key": "KPI2", "value": 8.3, "color": "green"}, {"key": "Uptime", "value": 99.1, "color": "green"}, {"key": "Errors", "value": 0.11, "color": "green"}], "borderColor": "green"},
+        {"name": "ServicePro", "group": "Customer", "details": [{"key": "KPI1", "value": 88.4, "color": "green"}, {"key": "KPI2", "value": 7.5, "color": "green"}, {"key": "Uptime", "value": 97.9, "color": "green"}, {"key": "Errors", "value": 0.28, "color": "green"}], "borderColor": "green"},
+        {"name": "AIDVerify", "group": "Customer", "details": [{"key": "KPI1", "value": 95.1, "color": "green"}, {"key": "KPI2", "value": 8.7, "color": "green"}, {"key": "Uptime", "value": 99.6, "color": "green"}, {"key": "Errors", "value": 0.05, "color": "green"}], "borderColor": "green"},
+        {"name": "FeedbackX", "group": "Customer", "details": [{"key": "KPI1", "value": 80.9, "color": "green"}, {"key": "KPI2", "value": 6.3, "color": "orange"}, {"key": "Uptime", "value": 94.7, "color": "green"}, {"key": "Errors", "value": 0.73, "color": "green"}], "borderColor": "orange"},
+        {"name": "OrderEase", "group": "Customer", "details": [{"key": "KPI1", "value": 89.2, "color": "green"}, {"key": "KPI2", "value": 7.7, "color": "green"}, {"key": "Uptime", "value": 98.1, "color": "green"}, {"key": "Errors", "value": 0.24, "color": "green"}], "borderColor": "green"},
+        {"name": "SurveyPlus", "group": "Customer", "details": [{"key": "KPI1", "value": 74.8, "color": "orange"}, {"key": "KPI2", "value": 5.4, "color": "orange"}, {"key": "Uptime", "value": 90.3, "color": "green"}, {"key": "Errors", "value": 1.32, "color": "orange"}], "borderColor": "orange"},
+        {"name": "RewardsHub", "group": "Customer", "details": [{"key": "KPI1", "value": 86.8, "color": "green"}, {"key": "KPI2", "value": 7.2, "color": "green"}, {"key": "Uptime", "value": 97.4, "color": "green"}, {"key": "Errors", "value": 0.35, "color": "green"}], "borderColor": "green"},
+        {"name": "ComplaintM", "group": "Customer", "details": [{"key": "KPI1", "value": 78.6, "color": "orange"}, {"key": "KPI2", "value": 5.9, "color": "orange"}, {"key": "Uptime", "value": 93.1, "color": "green"}, {"key": "Errors", "value": 0.94, "color": "green"}], "borderColor": "orange"},
+        {"name": "CustInsights", "group": "Customer", "details": [{"key": "KPI1", "value": 93.2, "color": "green"}, {"key": "KPI2", "value": 8.4, "color": "green"}, {"key": "Uptime", "value": 99.2, "color": "green"}, {"key": "Errors", "value": 0.09, "color": "green"}], "borderColor": "green"},
+        {"name": "Address Pro", "group": "Customer", "details": [{"key": "KPI1", "value": 85.9, "color": "green"}, {"key": "KPI2", "value": 7.1, "color": "green"}, {"key": "Uptime", "value": 97.1, "color": "green"}, {"key": "Errors", "value": 0.38, "color": "green"}], "borderColor": "green"},
+        {"name": "CustomerCare", "group": "Customer", "details": [{"key": "KPI1", "value": 91.1, "color": "green"}, {"key": "KPI2", "value": 8.0, "color": "green"}, {"key": "Uptime", "value": 98.8, "color": "green"}, {"key": "Errors", "value": 0.16, "color": "green"}], "borderColor": "green"},
+        {"name": "SupportX", "group": "Customer", "details": [{"key": "KPI1", "value": 65.3, "color": "orange"}, {"key": "KPI2", "value": 4.2, "color": "red"}, {"key": "Uptime", "value": 83.5, "color": "orange"}, {"key": "Errors", "value": 2.47, "color": "orange"}], "borderColor": "red"},
+        {"name": "QueryAssist", "group": "Customer", "details": [{"key": "KPI1", "value": 87.9, "color": "green"}, {"key": "KPI2", "value": 7.4, "color": "green"}, {"key": "Uptime", "value": 97.7, "color": "green"}, {"key": "Errors", "value": 0.30, "color": "green"}], "borderColor": "green"},
+        {"name": "CustPortal", "group": "Customer", "details": [{"key": "KPI1", "value": 94.1, "color": "green"}, {"key": "KPI2", "value": 8.6, "color": "green"}, {"key": "Uptime", "value": 99.4, "color": "green"}, {"key": "Errors", "value": 0.07, "color": "green"}], "borderColor": "green"},
+        {"name": "OrderTrack", "group": "Customer", "details": [{"key": "KPI1", "value": 71.2, "color": "orange"}, {"key": "KPI2", "value": 5.1, "color": "orange"}, {"key": "Uptime", "value": 88.7, "color": "orange"}, {"key": "Errors", "value": 1.58, "color": "orange"}], "borderColor": "orange"},
+        {"name": "FeedbackPro", "group": "Customer", "details": [{"key": "KPI1", "value": 84.9, "color": "green"}, {"key": "KPI2", "value": 6.9, "color": "orange"}, {"key": "Uptime", "value": 96.6, "color": "green"}, {"key": "Errors", "value": 0.45, "color": "green"}], "borderColor": "orange"},
+        {"name": "ProfilePlus", "group": "Customer", "details": [{"key": "KPI1", "value": 89.5, "color": "green"}, {"key": "KPI2", "value": 7.7, "color": "green"}, {"key": "Uptime", "value": 98.3, "color": "green"}, {"key": "Errors", "value": 0.22, "color": "green"}], "borderColor": "green"},
+        {"name": "SafeSys", "group": "Audit", "details": [{"key": "KPI1", "value": 96.8, "color": "green"}, {"key": "KPI2", "value": 9.1, "color": "green"}, {"key": "Uptime", "value": 99.8, "color": "green"}, {"key": "Errors", "value": 0.02, "color": "green"}], "borderColor": "green"},
+        {"name": "AuditPro", "group": "Audit", "details": [{"key": "KPI1", "value": 95.3, "color": "green"}, {"key": "KPI2", "value": 8.8, "color": "green"}, {"key": "Uptime", "value": 99.5, "color": "green"}, {"key": "Errors", "value": 0.06, "color": "green"}], "borderColor": "green"},
+        {"name": "CheckM8", "group": "Audit", "details": [{"key": "KPI1", "value": 98.2, "color": "green"}, {"key": "KPI2", "value": 9.5, "color": "green"}, {"key": "Uptime", "value": 99.9, "color": "green"}, {"key": "Errors", "value": 0.01, "color": "green"}], "borderColor": "green"},
+        {"name": "RiskGuard", "group": "Audit", "details": [{"key": "KPI1", "value": 97.1, "color": "green"}, {"key": "KPI2", "value": 9.2, "color": "green"}, {"key": "Uptime", "value": 99.8, "color": "green"}, {"key": "Errors", "value": 0.02, "color": "green"}], "borderColor": "green"},
+        {"name": "ComplyX", "group": "Audit", "details": [{"key": "KPI1", "value": 94.6, "color": "green"}, {"key": "KPI2", "value": 8.7, "color": "green"}, {"key": "Uptime", "value": 99.5, "color": "green"}, {"key": "Errors", "value": 0.05, "color": "green"}], "borderColor": "green"},
+        {"name": "AuditMate", "group": "Audit", "details": [{"key": "KPI1", "value": 93.9, "color": "green"}, {"key": "KPI2", "value": 8.5, "color": "green"}, {"key": "Uptime", "value": 99.4, "color": "green"}, {"key": "Errors", "value": 0.07, "color": "green"}], "borderColor": "green"},
+        {"name": "PropSafe", "group": "Mortgages", "details": [{"key": "KPI1", "value": 92.3, "color": "green"}, {"key": "KPI2", "value": 8.3, "color": "green"}, {"key": "Uptime", "value": 99.1, "color": "green"}, {"key": "Errors", "value": 0.10, "color": "green"}], "borderColor": "green"},
+        {"name": "LoanGenX", "group": "Mortgages", "details": [{"key": "KPI1", "value": 88.1, "color": "green"}, {"key": "KPI2", "value": 7.5, "color": "green"}, {"key": "Uptime", "value": 97.9, "color": "green"}, {"key": "Errors", "value": 0.27, "color": "green"}], "borderColor": "green"},
+        {"name": "MortApp", "group": "Mortgages", "details": [{"key": "KPI1", "value": 85.4, "color": "green"}, {"key": "KPI2", "value": 7.0, "color": "green"}, {"key": "Uptime", "value": 96.8, "color": "green"}, {"key": "Errors", "value": 0.43, "color": "green"}], "borderColor": "green"},
+        {"name": "RateWise", "group": "Mortgages", "details": [{"key": "KPI1", "value": 91.7, "color": "green"}, {"key": "KPI2", "value": 8.2, "color": "green"}, {"key": "Uptime", "value": 98.9, "color": "green"}, {"key": "Errors", "value": 0.14, "color": "green"}], "borderColor": "green"},
+        {"name": "DocSecure", "group": "Mortgages", "details": [{"key": "KPI1", "value": 94.5, "color": "green"}, {"key": "KPI2", "value": 8.6, "color": "green"}, {"key": "Uptime", "value": 99.5, "color": "green"}, {"key": "Errors", "value": 0.06, "color": "green"}], "borderColor": "green"},
+        {"name": "AssureMort", "group": "Mortgages", "details": [{"key": "KPI1", "value": 90.1, "color": "green"}, {"key": "KPI2", "value": 7.9, "color": "green"}, {"key": "Uptime", "value": 98.5, "color": "green"}, {"key": "Errors", "value": 0.19, "color": "green"}], "borderColor": "green"},
+        {"name": "PayLink", "group": "Mortgages", "details": [{"key": "KPI1", "value": 63.8, "color": "orange"}, {"key": "KPI2", "value": 3.9, "color": "red"}, {"key": "Uptime", "value": 81.7, "color": "orange"}, {"key": "Errors", "value": 2.84, "color": "orange"}], "borderColor": "red"},
+        {"name": "HomeTrack", "group": "Mortgages", "details": [{"key": "KPI1", "value": 86.4, "color": "green"}, {"key": "KPI2", "value": 7.1, "color": "green"}, {"key": "Uptime", "value": 97.2, "color": "green"}, {"key": "Errors", "value": 0.37, "color": "green"}], "borderColor": "green"}] 
+		,"links":[{
+          "source": "PowerBI",
+          "target": "Tableau",
+          "value": "Sales performance metrics"
+        },
+        {
+          "source": "Google Data Studio",
+          "target": "QlikView",
+          "value": "Customer segmentation"
+        },
+        {
+          "source": "FDX-Elite",
+          "target": "AML-Secure",
+          "value": "Customer segmentation"
+        },
+        {
+          "source": "Google Data Studio",
+          "target": "GoodData",
+          "value": "Customer segmentation"
+        },
+        {
+          "source": "Google Data Studio",
+          "target": "Cognos Analytics",
+          "value": "Customer segmentation"
+        },
+        {
+          "source": "Google Data Studio",
+          "target": "MicroStrategy",
+          "value": "Financial reports"
+        },
+        {
+          "source": "Cognos Analytics",
+          "target": "Yellowfin",
+          "value": "Product analytics"
+        },
+        {
+          "source": "Google Data Studio",
+          "target": "Domo",
+          "value": "Supply chain data"
+        },
+        {
+          "source": "Birst",
+          "target": "Periscope Data",
+          "value": "Market trends"
+        },
+        {"source": "PowerBI", "target": "Sisense", "value": "Market trends"},
+        {"source": "RTGS-Plus", "target": "CBS-Pro", "value": "Market trends"},
+        {"source": "PowerBI", "target": "CBS-Pro", "value": "Market trends"},
+        {
+          "source": "Google Data Studio",
+          "target": "Zoho Analytics",
+          "value": "Employee performance"
+        },
+        {
+          "source": "Google Data Studio",
+          "target": "Oracle Analytics Cloud",
+          "value": "Inventory status"
+        },
+        {
+          "source": "LMS-Elite",
+          "target": "RTGS-Plus",
+          "value": "Inventory status"
+        },
+        {
+          "source": "FeedbackX",
+          "target": "CustomerCare",
+          "value": "Inventory status"
+        },
+        {
+          "source": "EFT-Core",
+          "target": "RTGS-Plus",
+          "value": "Inventory status"
+        },
+        {
+          "source": "SAP BusinessObjects",
+          "target": "Cognos TM1",
+          "value": "Budget forecasts"
+        },
+        {
+          "source": "Google Data Studio",
+          "target": "Yellowfin",
+          "value": "Customer satisfaction"
+        },
+        {
+          "source": "PowerBI",
+          "target": "SAP BusinessObjects",
+          "value": "Order fulfillment"
+        },
+        {
+          "source": "Birst",
+          "target": "Microsoft SSRS",
+          "value": "Marketing ROI"
+        },
+        {
+          "source": "Periscope Data",
+          "target": "Cognos Analytics",
+          "value": "Social media engagement"
+        },
+        {
+          "source": "Sisense",
+          "target": "Looker",
+          "value": "Website traffic"
+        },
+        {
+          "source": "Cognos TM1",
+          "target": "Sisense",
+          "value": "Productivity metrics"
+        },
+        {
+          "source": "CustInsights",
+          "target": "Contact360",
+          "value": "Productivity metrics"
+        },
+        {
+          "source": "EFT-Core",
+          "target": "FeedbackX",
+          "value": "Productivity metrics"
+        },
+        {"source": "PowerBI", "target": "Birst", "value": "Customer feedback"},
+        {
+          "source": "Tableau",
+          "target": "SAP BusinessObjects",
+          "value": "Vendor performance"
+        },
+        {
+          "source": "Microsoft SSRS",
+          "target": "Google Data Studio",
+          "value": "Website conversions"
+        },
+        {
+          "source": "Pentaho",
+          "target": "Tableau",
+          "value": "Website conversions stage 2"
+        },
+        {
+          "source": "Yellowfin",
+          "target": "Pentaho",
+          "value": "Website conversions stage 3"
+        },
+        {"source": "CDA", "target": "ATM-X", "value": "Account balances"},
+        {"source": "CBS-Pro", "target": "ATM-X", "value": "Account metadata"},
+        {
+          "source": "CBS-Pro",
+          "target": "SAP BusinessObjects",
+          "value": "Account metadata"
+        },
+        {
+          "source": "CBS-Pro",
+          "target": "Cognos TM1",
+          "value": "Account metadata"
+        },
+        {
+          "source": "ATM-X",
+          "target": "Cognos TM1",
+          "value": "Account metadata"
+        },
+        {
+          "source": "SWIFT-Net",
+          "target": "EFT-Core",
+          "value": "Account metadata"
+        },
+        {
+          "source": "RTGS-Plus",
+          "target": "ProfileM",
+          "value": "Account metadata"
+        },
+        {
+          "source": "RTGS-Plus",
+          "target": "AddrPro",
+          "value": "Account metadata"
+        },
+        {
+          "source": "CustEngage",
+          "target": "Microsoft SSRS",
+          "value": "Account metadata"
+        },
+        {
+          "source": "EFT-Core",
+          "target": "CRM-Fusion",
+          "value": "Transaction history"
+        },
+        {
+          "source": "FDX-Elite",
+          "target": "RTGS-Plus",
+          "value": "Funds transfer details"
+        },
+        {
+          "source": "RDC-Express",
+          "target": "CustCare-Plus",
+          "value": "Loan application status"
+        },
+        {
+          "source": "BookKeepPro",
+          "target": "PayTrack",
+          "value": "Loan application status"
+        },
+        {
+          "source": "AML-Secure",
+          "target": "RDC-Express",
+          "value": "Risk assessment data"
+        },
+        {
+          "source": "RDC-Express",
+          "target": "ACH-Secure",
+          "value": "Customer identification"
+        },
+        {
+          "source": "RDC-Express",
+          "target": "P2P-Gateway",
+          "value": "Peer-to-peer payments"
+        },
+        {
+          "source": "FDX-Elite",
+          "target": "ACH-Secure",
+          "value": "Automated Clearing House transactions"
+        },
+        {
+          "source": "RTGS-Plus",
+          "target": "CRM-Fusion",
+          "value": "Marketing campaign impact"
+        },
+        {
+          "source": "CDA",
+          "target": "RTGS-Plus",
+          "value": "Real-time gross settlement"
+        },
+        {
+          "source": "FMS-Prime",
+          "target": "LMS-Elite",
+          "value": "Financial management reports"
+        },
+        {
+          "source": "RDC-Express",
+          "target": "Loans-360",
+          "value": "Loan disbursement details"
+        },
+        {
+          "source": "RDC-Express",
+          "target": "KYC-Master",
+          "value": "Customer onboarding information"
+        },
+        {
+          "source": "SWIFT-Net",
+          "target": "ACH-Secure",
+          "value": "Secure electronic funds transfer"
+        },
+        {
+          "source": "RDC-Express",
+          "target": "POS-Master",
+          "value": "Point of sale transactions"
+        },
+        {
+          "source": "CustomerCare",
+          "target": "RewardsHub",
+          "value": "Point of sale transactions"
+        },
+        {
+          "source": "CDA",
+          "target": "CRM-Fusion",
+          "value": "Customer relationship details"
+        },
+        {
+          "source": "FMS-Prime",
+          "target": "AML-Secure",
+          "value": "Anti-money laundering checks"
+        },
+        {
+          "source": "FDX-Elite",
+          "target": "RTGS-Plus",
+          "value": "Real-time funds transfer"
+        },
+        {
+          "source": "RDC-Express",
+          "target": "CustCare-Plus",
+          "value": "Customer support interactions"
+        },
+        {
+          "source": "Birst",
+          "target": "FeedbackPro",
+          "value": "Customer support interactions"
+        },
+        {
+          "source": "FeedbackX",
+          "target": "FDX-Elite",
+          "value": "Customer support interactions"
+        },
+        {
+          "source": "Cognos Analytics",
+          "target": "QueryAssist",
+          "value": "Customer support interactions"
+        },
+        {
+          "source": "Pentaho",
+          "target": "PowerBI",
+          "value": "Customer support interactions"
+        },
+        {
+          "source": "AddrPro",
+          "target": "PowerBI",
+          "value": "Customer support interactions"
+        },
+        {
+          "source": "CRM-Fusion",
+          "target": "RDC-Express",
+          "value": "Customer data verification"
+        },
+        {
+          "source": "RDC-Express",
+          "target": "AB-Mobile",
+          "value": "Peer-to-peer payment history"
+        },
+        {"source": "CDA", "target": "ATM-X", "value": "Account balances"},
+        {
+          "source": "EFT-Core",
+          "target": "CRM-Fusion",
+          "value": "Transaction history"
+        },
+        {
+          "source": "FDX-Elite",
+          "target": "RTGS-Plus",
+          "value": "Funds transfer details"
+        },
+        {
+          "source": "SWIFT-Net",
+          "target": "MBS-Optima",
+          "value": "International transactions"
+        },
+        {"source": "CustHub", "target": "ProfileM", "value": "Post code data"},
+        {
+          "source": "AddrPro",
+          "target": "Contact360",
+          "value": "Address verification details"
+        },
+        {
+          "source": "CustEngage",
+          "target": "AIDVerify",
+          "value": "Identity verification"
+        },
+        {
+          "source": "FeedbackX",
+          "target": "OrderEase",
+          "value": "Customer feedback on orders"
+        },
+        {
+          "source": "SurveyPlus",
+          "target": "RewardsHub",
+          "value": "Survey participation rewards"
+        },
+        {
+          "source": "ComplaintM",
+          "target": "CustInsights",
+          "value": "Customer complaint analytics"
+        },
+        {
+          "source": "CustomerCare",
+          "target": "SupportX",
+          "value": "Customer support interactions"
+        },
+        {
+          "source": "QueryAssist",
+          "target": "CustPortal",
+          "value": "Query assistance in the portal"
+        },
+        {
+          "source": "FeedbackPro",
+          "target": "ProfilePlus",
+          "value": "Feedback on customer profiles"
+        },
+        {
+          "source": "CustHub",
+          "target": "OrderTrack",
+          "value": "Order tracking information"
+        },
+        {
+          "source": "AddrPro",
+          "target": "AIDVerify",
+          "value": "Identity verification for addresses"
+        },
+        {
+          "source": "Contact360",
+          "target": "CustPortal",
+          "value": "Customer contact details in portal"
+        },
+        {
+          "source": "SurveyPlus",
+          "target": "OrderEase",
+          "value": "Survey responses affecting orders"
+        },
+        {
+          "source": "FeedbackPro",
+          "target": "CustEngage",
+          "value": "Feedback influencing engagement"
+        },
+        {
+          "source": "CustInsights",
+          "target": "CustomerCare",
+          "value": "Insights influencing customer care"
+        },
+        {
+          "source": "ProfileM",
+          "target": "QueryAssist",
+          "value": "Profile-related query assistance"
+        },
+        {
+          "source": "Address Pro",
+          "target": "FeedbackX",
+          "value": "Order tracking feedback"
+        },
+        {
+          "source": "Contact360",
+          "target": "RewardsHub",
+          "value": "Contact details for rewards"
+        },
+        {
+          "source": "AddrPro",
+          "target": "CustPortal",
+          "value": "Address data in customer portal"
+        },
+        {
+          "source": "QueryAssist",
+          "target": "ProfilePlus",
+          "value": "Profile-related query assistance"
+        },
+        {
+          "source": "CustEngage",
+          "target": "CustHub",
+          "value": "Customer engagement details"
+        },
+        {
+          "source": "OrderEase",
+          "target": "ProfileM",
+          "value": "Order-related profile data"
+        },
+        {
+          "source": "RewardsHub",
+          "target": "CustInsights",
+          "value": "Rewards impacting customer insights"
+        },
+        {
+          "source": "CustInsights",
+          "target": "SupportX",
+          "value": "Insights affecting support queries"
+        },
+        {
+          "source": "FeedbackX",
+          "target": "OrderTrack",
+          "value": "Feedback influencing order tracking"
+        },
+        {
+          "source": "ProfilePlus",
+          "target": "AddrPro",
+          "value": "Profile data affecting addresses"
+        },
+        {
+          "source": "QueryAssist",
+          "target": "FeedbackPro",
+          "value": "Query assistance for feedback"
+        },
+        {
+          "source": "CustPortal",
+          "target": "SurveyPlus",
+          "value": "Portal data influencing surveys"
+        },
+        {
+          "source": "CustHub",
+          "target": "FeedbackPro",
+          "value": "Customer feedback hub"
+        },
+        {
+          "source": "Contact360",
+          "target": "CustEngage",
+          "value": "Contact data influencing engagement"
+        },
+        {
+          "source": "RewardsHub",
+          "target": "OrderTrack",
+          "value": "Rewards-related order tracking"
+        },
+        {
+          "source": "SupportX",
+          "target": "ProfileM",
+          "value": "Support interactions affecting profiles"
+        },
+        {
+          "source": "Address Pro",
+          "target": "ProfileM",
+          "value": "Support interactions affecting profiles"
+        },
+        {
+          "source": "Address Pro",
+          "target": "CBS-Pro",
+          "value": "Support interactions affecting profiles"
+        },
+        {
+          "source": "QueryAssist",
+          "target": "CBS-Pro",
+          "value": "Support interactions affecting profiles"
+        },
+        {
+          "source": "LMS-Elite",
+          "target": "CBS-Pro",
+          "value": "Support interactions affecting profiles"
+        },
+        {
+          "source": "QueryAssist",
+          "target": "PowerBI",
+          "value": "Support interactions affecting profiles"
+        },
+        {
+          "source": "CRM-Fusion",
+          "target": "FDX-Elite",
+          "value": "Support interactions affecting profiles"
+        },
+        {
+          "source": "RDC-Express",
+          "target": "FDX-Elite",
+          "value": "Support interactions affecting profiles"
+        },
+        {
+          "source": "FMS-Prime",
+          "target": "CDA",
+          "value": "Support interactions affecting profiles"
+        },
+        {
+          "source": "Ledger+",
+          "target": "PayRoller",
+          "value": "Ledger meta data"
+        },
+        {
+          "source": "CashFlowX",
+          "target": "AuditWise",
+          "value": "Cash flow audit details"
+        },
+        {
+          "source": "ExpenseEZ",
+          "target": "BookKeepPro",
+          "value": "Expense details in bookkeeping"
+        },
+        {
+          "source": "ProfitMax",
+          "target": "BinvoiceGen",
+          "value": "Profit details from invoicing"
+        },
+        {
+          "source": "BudgetMate",
+          "target": "AssetValu",
+          "value": "Budget allocation for assets"
+        },
+        {
+          "source": "FeedbackX",
+          "target": "Address Pro",
+          "value": "Budget allocation for assets"
+        },
+        {
+          "source": "VATMaster",
+          "target": "TaxTrack",
+          "value": "VAT details in tax tracking"
+        },
+        {
+          "source": "LedgerLite",
+          "target": "PayTrack",
+          "value": "Ledger details in payroll tracking"
+        },
+        {
+          "source": "CashBooker",
+          "target": "LedgerLite",
+          "value": "Cash details in ledger"
+        },
+        {
+          "source": "PayRoller",
+          "target": "LedgerLite",
+          "value": "Payroll entries in ledger"
+        },
+        {
+          "source": "BudgetMate",
+          "target": "ProfitMax",
+          "value": "Budget impact on profits"
+        },
+        {
+          "source": "CashFlowX",
+          "target": "PayRoller",
+          "value": "Cash flow in payroll"
+        },
+        {
+          "source": "ExpenseEZ",
+          "target": "CashBooker",
+          "value": "Expense details in cash book"
+        },
+        {
+          "source": "AuditWise",
+          "target": "VATMaster",
+          "value": "Audit details in VAT tracking"
+        },
+        {
+          "source": "Ledger+",
+          "target": "ProfitMax",
+          "value": "Ledger details affecting profits"
+        },
+        {
+          "source": "EngageMate",
+          "target": "SurveyX",
+          "value": "Customer survey data"
+        },
+        {
+          "source": "SurveyX",
+          "target": "ServicePro",
+          "value": "Customer engagement impacting service"
+        },
+        {
+          "source": "ServicePro",
+          "target": "SurveyX",
+          "value": "Customer feedback influencing surveys"
+        },
+        {
+          "source": "EngageMate",
+          "target": "CustEngage",
+          "value": "Customer feedback influencing surveys"
+        },
+        {
+          "source": "AssetValu",
+          "target": "ExpenseEZ",
+          "value": "Asset value affecting expenses"
+        },
+        {
+          "source": "Address Pro",
+          "target": "RTGS-Plus",
+          "value": "Asset value affecting expenses"
+        },
+        {
+          "source": "BookKeepPro",
+          "target": "ComplaintM",
+          "value": "Asset value affecting expenses"
+        },
+        {
+          "source": "ComplyX",
+          "target": "AML-Secure",
+          "value": "Asset value affecting expenses"
+        },
+        {
+          "source": "CustomerCare",
+          "target": "ComplaintM",
+          "value": "Asset value affecting expenses"
+        },
+        {
+          "source": "CashBooker",
+          "target": "BudgetMate",
+          "value": "Cash book entries affecting budget"
+        },
+        {
+          "source": "CashBooker",
+          "target": "VATMaster",
+          "value": "Invoice impact on VAT"
+        },
+        {
+          "source": "BudgetMate",
+          "target": "AuditGuard",
+          "value": "Budget details in audit"
+        },
+        {
+          "source": "AuditWise",
+          "target": "LedgerLite",
+          "value": "Audit details in ledger"
+        },
+        {
+          "source": "PayTrack",
+          "target": "ExpenseEZ",
+          "value": "Payroll tracking affecting expenses"
+        },
+        {
+          "source": "TaxTrack",
+          "target": "LedgerLite",
+          "value": "Tax tracking entries in ledger"
+        },
+        {
+          "source": "LedgerLite",
+          "target": "CashFlowX",
+          "value": "Ledger entries affecting cash flow"
+        },
+        {
+          "source": "Ledger+",
+          "target": "BookKeepPro",
+          "value": "Ledger details affecting bookkeeping"
+        },
+        {"source": "SafeSys", "target": "CheckM8", "value": "Audit meta data"},
+        {
+          "source": "AuditPro",
+          "target": "RiskGuard",
+          "value": "Audit details affecting risk assessment"
+        },
+        {
+          "source": "ComplyX",
+          "target": "AuditMate",
+          "value": "Compliance details in audit"
+        },
+        {
+          "source": "RiskGuard",
+          "target": "SafeSys",
+          "value": "Risk assessment affecting audit"
+        },
+        {
+          "source": "AuditMate",
+          "target": "CheckM8",
+          "value": "Audit details affecting checks"
+        },
+        {
+          "source": "SafeSys",
+          "target": "AuditPro",
+          "value": "Audit details affecting auditing process"
+        },
+        {
+          "source": "ComplyX",
+          "target": "SafeSys",
+          "value": "Compliance details affecting audit"
+        },
+        {
+          "source": "RiskGuard",
+          "target": "AuditPro",
+          "value": "Risk assessment in audit process"
+        },
+        {
+          "source": "AuditMate",
+          "target": "SafeSys",
+          "value": "Audit details affecting safety systems"
+        },
+        {
+          "source": "CheckM8",
+          "target": "ComplyX",
+          "value": "Checks impacting compliance"
+        },
+        {
+          "source": "RiskGuard",
+          "target": "CheckM8",
+          "value": "Risk assessment in checks"
+        },
+        {
+          "source": "AuditPro",
+          "target": "AuditMate",
+          "value": "Audit details affecting audit mate"
+        },
+        {
+          "source": "PropSafe",
+          "target": "LoanGenX",
+          "value": "Mortgage meta data"
+        },
+        {
+          "source": "PropSafe",
+          "target": "HomeTrack",
+          "value": "Property details affecting home tracking"
+        },
+        {
+          "source": "LoanGenX",
+          "target": "PayLink",
+          "value": "Loan details impacting payment links"
+        },
+        {
+          "source": "MortApp",
+          "target": "AssureMort",
+          "value": "Mortgage application affecting insurance"
+        },
+        {
+          "source": "DocSecure",
+          "target": "HomeTrack",
+          "value": "Secure documents affecting home tracking"
+        },
+        {
+          "source": "RateWise",
+          "target": "LoanGenX",
+          "value": "Rates impacting loan generation"
+        },
+        {
+          "source": "MortApp",
+          "target": "DocSecure",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "RateWise",
+          "target": "LMS-Elite",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "Address Pro",
+          "target": "SurveyPlus",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "AssureMort",
+          "target": "LMS-Elite",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "AuditMate",
+          "target": "LMS-Elite",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "AssureMort",
+          "target": "DocSecure",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "RateWise",
+          "target": "ATM-X",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "AssureMort",
+          "target": "FMS-Prime",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "FDX-Elite",
+          "target": "FMS-Prime",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "FMS-Prime",
+          "target": "AuditMate",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "CustPortal",
+          "target": "PayTrack",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "LedgerLite",
+          "target": "CustPortal",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "LedgerLite",
+          "target": "CustEngage",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "LMS-Elite",
+          "target": "CDA",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "AuditPro",
+          "target": "MortApp",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "FMS-Prime",
+          "target": "MortApp",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "SurveyPlus",
+          "target": "PayTrack",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "BookKeepPro",
+          "target": "CustInsights",
+          "value": "Mortgage application documents"
+        },
+        {
+          "source": "RateWise",
+          "target": "AssureMort",
+          "value": "Insurance details impacting rates"
+        },
+        {
+          "source": "PayLink",
+          "target": "HomeTrack",
+          "value": "Payment details affecting home tracking"
+        },
+        {
+          "source": "LoanGenX",
+          "target": "AssureMort",
+          "value": "Loan generation affecting insurance"
+        },
+        {
+          "source": "PropSafe",
+          "target": "DocSecure",
+          "value": "Property safety documents"
+        },
+        {
+          "source": "RateWise",
+          "target": "PayLink",
+          "value": "Rates impacting payment links"
+        },
+        {
+          "source": "EngageMate",
+          "target": "SinteractPro",
+          "value": "Rates impacting payment links"
+        },
+        {
+          "source": "SinteractPro",
+          "target": "ConnectEase",
+          "value": "Rates impacting payment links"
+        }]}
