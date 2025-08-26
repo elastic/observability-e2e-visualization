@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/elastic/observability-e2e-visualization#readme",
   "dependencies": {
+    "uuid": "^11.1.0",
     "vega": "^6.1.2"
   }
 }
