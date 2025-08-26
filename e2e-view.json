@@ -82,15 +82,14 @@
       "name": "node-data",
       "source": "link-data",
       "transform": [
-        { "type": "fold", "fields": ["source", "target"], "as": ["field", "id"] },
-        { "type": "aggregate", "groupby": ["id"] },
-        { "type": "lookup", "from": "source-connections", "key": "source", "fields": ["id"], "values": ["targets"], "as": ["targets"], "default": [""] },
-        { "type": "lookup", "from": "target-connections", "key": "target", "fields": ["id"], "values": ["sources"], "as": ["sources"], "default": [""] },
+        { "type": "formula", "as": "nodes", "expr": "[datum.source, datum.target]" },
+        { "type": "flatten", "fields": ["nodes"], "as": ["name"] },
+        { "type": "aggregate", "groupby": ["name"] },
         { "type": "force", "iterations": 300, "restart": { "signal": "restart" }, "signal": "force", "forces": [
           { "force": "center", "x": { "signal": "cx" }, "y": { "signal": "cy" } },
           { "force": "collide", "radius": { "signal": "sqrt(4 * nodeRadius * nodeRadius)" }, "iterations": 1, "strength": 0.7 },
           { "force": "nbody", "strength": { "signal": "nodeCharge" } },
-          { "force": "link", "links": "link-data", "distance": { "signal": "linkDistance" }, "id": "id" }
+          { "force": "link", "links": "link-data", "distance": { "signal": "linkDistance" }, "id": "name" }
         ] },
         { "type": "formula", "as": "fx", "expr": "fix[0]!=null && node==datum.index ?invert('xscale',fix[0]):null" },
         { "type": "formula", "as": "fy", "expr": "fix[1]!=null && node==datum.index ?invert('yscale',fix[1]):null" }
