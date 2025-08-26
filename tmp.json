@@ -1,0 +1,39 @@
+{
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 600,
+      "relation": "eq"
+    },
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "asset-dependencies",
+        "_id": "YTpEd0j0QWqYw6hdHKfuSccAAAAAAAAA",
+        "_score": 1,
+        "_source": {
+          "@timestamp": { "max": { "max": null } },
+          "session_id": { "value_count": 3 },
+          "asset_pairs": "asset-0---asset-16"
+        }
+      },
+      {
+        "_index": "asset-dependencies",
+        "_id": "Yf4rE_3El74PLnmFkuy7niwAAAAAAAAA",
+        "_score": 1,
+        "_source": {
+          "@timestamp": { "max": { "max": null } },
+          "session_id": { "value_count": 1 },
+          "asset_pairs": "asset-0---asset-17"
+        }
+      }
+    ]
+  }
+}
