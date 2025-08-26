@@ -1,0 +1,36 @@
+PUT /_transform/asset-dependencies
+{
+  "source": {
+    "index": [
+      "asset-stats"
+    ],
+    "query": {
+      "match_all": {}
+    }
+  },
+  "dest": {
+    "index": "asset-dependencies"
+  },
+  "pivot": {
+    "group_by": {
+      "asset_pairs": {
+        "terms": {
+          "field": "asset_pairs.keyword"
+        }
+      }
+    },
+    "aggregations": {
+      "session_id.value_count": {
+        "value_count": {
+          "field": "session_id"
+        }
+      },
+      "@timestamp.max.max": {
+        "max": {
+          "field": "@timestamp.max"
+        }
+      }
+    }
+  },
+  "settings": {}
+}

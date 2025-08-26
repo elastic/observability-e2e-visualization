@@ -1,0 +1,9 @@
+generate ndjson file to be imported into ElasticSearch
+
+the number of entries must be equal 1000 (totalCount)
+
+each entry must contain following fields:
+- @timestamp must be a random date in the last 7 days
+- service.name: cardinality is 20 
+- session.id: cardinality is totalCount/4
+- cmdb.id: a cmdb.id can have in average 5 service.name 

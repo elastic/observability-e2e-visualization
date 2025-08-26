@@ -1,0 +1,31 @@
+PUT /_ingest/pipeline/asset-stats
+{
+  "processors": [
+    {
+      "script": {
+        "source": """
+          if (ctx.sorted_assets == null || ctx.sorted_assets.length < 2) {
+            ctx.remove('sorted_assets');
+            return;
+          }
+          def pairs = new ArrayList();
+          def prev = ctx.sorted_assets[0];
+          for (int i = 1; i < ctx.sorted_assets.length; i++) {
+            def curr = ctx.sorted_assets[i];
+            pairs.add(prev + "---" + curr);
+            prev = curr;
+          }
+          ctx.asset_pairs = pairs;
+          ctx.remove('sorted_assets');
+          """
+      }
+    },
+    {
+      "remove": {
+        "field": "session.id",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    }
+  ]
+}

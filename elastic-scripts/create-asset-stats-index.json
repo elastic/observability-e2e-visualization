@@ -1,0 +1,13 @@
+PUT asset-stats
+{
+  "mappings": {
+    "properties": {
+      "session_id": {
+        "type": "keyword"
+      },
+      "sorted_assets": {
+        "type": "keyword"
+      }
+    }
+  }
+}

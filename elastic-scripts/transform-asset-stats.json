@@ -1,0 +1,46 @@
+PUT _transform/asset-stats
+{
+  "source": {
+    "index": "input-logs"
+  },
+  "dest": {
+    "index": "asset-stats",
+    "pipeline": "asset-stats"
+  },
+  "pivot": {
+    "group_by": {
+      "session_id": {
+        "terms": {
+          "field": "session_id"
+        }
+      }
+    },
+    "aggregations": {
+      "sorted_assets": {
+        "scripted_metric": {
+          "init_script": "state.docs = []",
+          "map_script": """
+            if (!doc['@timestamp'].empty && !doc['asset_id'].empty) {
+              state.docs.add([doc['@timestamp'].value.toInstant().toEpochMilli(), doc['asset_id'].value]);
+            }
+          """,
+          "combine_script": "return state.docs;",
+          "reduce_script": """
+            def all_docs = [];
+            for (s in states) {
+              if (s != null) {
+                all_docs.addAll(s);
+              }
+            }
+            all_docs.sort((a, b) -> a[0].compareTo(b[0]));
+            def sorted_ids = [];
+            for (item in all_docs) {
+              sorted_ids.add(item[1]);
+            }
+            return sorted_ids;
+          """
+        }
+      }
+    }
+  }
+}
