@@ -14,7 +14,7 @@
   "background": "#f4f7ff",
   "data": [
     {
-      "name": "link-data-raw",
+      "name": "link-data",
       "url": "./data.json",
       "format": {
         "type": "json",
@@ -22,12 +22,8 @@
       }
     },
     {
-      "name": "link-data",
-      "source": "link-data-raw"
-    },
-    {
       "name": "source-connections",
-      "source": "link-data-raw",
+      "source": "link-data",
       "transform": [
         {
           "type": "aggregate",
@@ -53,7 +49,7 @@
     },
     {
       "name": "target-connections",
-      "source": "link-data-raw",
+      "source": "link-data",
       "transform": [
         {
           "type": "aggregate",
@@ -152,7 +148,7 @@
             },
             {
               "force": "link",
-              "links": "link-data-raw",
+              "links": "link-data",
               "distance": {
                 "signal": "linkDistance"
               },
