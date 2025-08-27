@@ -2,8 +2,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "Elastic E2E view",
-  "width": 1400,
-  "height": 800,
+  "width": 1200,
+  "height": 600,
   "padding": {
     "left": 0,
     "right": 0,
@@ -15,7 +15,7 @@
   "data": [
     {
       "name": "link-data",
-      "url": "./asset-dependencies-responce.json",
+      "url": "./tmp.json",
       "format": {
         "type": "json",
         "property": "hits.hits"
@@ -79,20 +79,103 @@
       ]
     },
     {
-      "name": "node-data",
+      "name": "node-list",
       "source": "link-data",
       "transform": [
         { "type": "formula", "as": "nodes", "expr": "[datum.source, datum.target]" },
         { "type": "flatten", "fields": ["nodes"], "as": ["name"] },
-        { "type": "aggregate", "groupby": ["name"] },
-        { "type": "force", "iterations": 300, "restart": { "signal": "restart" }, "signal": "force", "forces": [
-          { "force": "center", "x": { "signal": "cx" }, "y": { "signal": "cy" } },
-          { "force": "collide", "radius": { "signal": "sqrt(4 * nodeRadius * nodeRadius)" }, "iterations": 1, "strength": 0.7 },
-          { "force": "nbody", "strength": { "signal": "nodeCharge" } },
-          { "force": "link", "links": "link-data", "distance": { "signal": "linkDistance" }, "id": "name" }
-        ] },
-        { "type": "formula", "as": "fx", "expr": "fix[0]!=null && node==datum.index ?invert('xscale',fix[0]):null" },
-        { "type": "formula", "as": "fy", "expr": "fix[1]!=null && node==datum.index ?invert('yscale',fix[1]):null" }
+        { "type": "aggregate", "groupby": ["name"] }
+      ]
+    },
+    {
+      "name": "node-data",
+      "source": "node-list",
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "source-connections",
+          "key": "source",
+          "fields": [
+            "name"
+          ],
+          "values": [
+            "targets"
+          ],
+          "as": [
+            "targets"
+          ],
+          "default": [
+            ""
+          ]
+        },
+        {
+          "type": "lookup",
+          "from": "target-connections",
+          "key": "target",
+          "fields": [
+            "name"
+          ],
+          "values": [
+            "sources"
+          ],
+          "as": [
+            "sources"
+          ],
+          "default": [
+            ""
+          ]
+        },
+        {
+          "type": "force",
+          "iterations": 300,
+          "restart": {
+            "signal": "restart"
+          },
+          "signal": "force",
+          "forces": [
+            {
+              "force": "center",
+              "x": {
+                "signal": "cx"
+              },
+              "y": {
+                "signal": "cy"
+              }
+            },
+            {
+              "force": "collide",
+              "radius": {
+                "signal": "sqrt(4 * nodeRadius * nodeRadius)"
+              },
+              "iterations": 1,
+              "strength": 0.7
+            },
+            {
+              "force": "nbody",
+              "strength": {
+                "signal": "nodeCharge"
+              }
+            },
+            {
+              "force": "link",
+              "links": "link-data",
+              "distance": {
+                "signal": "linkDistance"
+              },
+              "id": "name"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "as": "fx",
+          "expr": "fix[0]!=null && node==datum.index ?invert('xscale',fix[0]):null"
+        },
+        {
+          "type": "formula",
+          "as": "fy",
+          "expr": "fix[1]!=null && node==datum.index ?invert('yscale',fix[1]):null"
+        }
       ]
     },
     {
