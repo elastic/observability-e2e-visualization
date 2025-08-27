@@ -1,0 +1,2499 @@
+{
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 80,
+      "relation": "eq"
+    },
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "asset-status",
+        "_id": "hTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-0",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 76.7,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.3,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 92.6,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.24,
+              "color": "orange"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "hjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-1",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 87.6,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.7,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 98.4,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.1900000000000002,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "hztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-2",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 73.3,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.2,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 92.9,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.3,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "iDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-3",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 83.6,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.300000000000001,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 89.7,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.2200000000000002,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "iTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-4",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 91.9,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.399999999999999,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 88.5,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.21,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "ijtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-5",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 89.4,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.3,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 92.9,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.35,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "iztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-6",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 70.5,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.8999999999999995,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 88.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.5799999999999998,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "jDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-7",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 79.4,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.299999999999999,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 92.2,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.3900000000000001,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "jTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-8",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 78.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.300000000000001,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.73,
+              "color": "orange"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "jjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-9",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 88.7,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.3,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 95.9,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.3900000000000001,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "jztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-10",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 95.5,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.5,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 92.1,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.6799999999999999,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "kDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-11",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 84.9,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.4,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 92.7,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.56,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "kTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-12",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 86.1,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 7,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 90,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "kjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-13",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 79.5,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.1,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.6,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.7,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "kztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-14",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 76.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.2,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 98.9,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.23,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "lDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-15",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 66.6,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.9,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 92.6,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.05,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "lTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-16",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 64.6,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.8,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.5,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.25,
+              "color": "orange"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "ljtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-17",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 81.2,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.3999999999999995,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 91.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.25,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "lztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-18",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 87.6,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.300000000000001,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 90,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.09,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "mDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-19",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 69.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.2,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 93.8,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.17,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "mTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-20",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 73.8,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.4,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 89.8,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.17,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "mjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-21",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 85.7,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.100000000000001,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.8,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.14,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "mztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-22",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 97.2,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.6,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 98.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.05,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "nDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-23",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 68.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.3,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 92.2,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.56,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "nTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-24",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 74.5,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 4.2,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.2,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.72,
+              "color": "orange"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "njtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-25",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 85.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.9,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 93.4,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.33999999999999997,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "nztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-26",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 65.5,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.4,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 88.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.71,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "oDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-27",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 69.6,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.8999999999999995,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 92.2,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.8200000000000001,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "oTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-28",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 83.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 99.5,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.04,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "ojtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-29",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 64.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.3,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 98.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.47,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "oztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-30",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 96.7,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.4,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 90.1,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.08,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "pDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-31",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 88.5,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.1,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 88.5,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.5700000000000001,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "pTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-32",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 88.9,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 95.1,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.02,
+              "color": "orange"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "pjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-33",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 94,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.200000000000001,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 91.5,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.18,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "pztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-34",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 84,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.399999999999999,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 91.1,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.4,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "qDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-35",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 81.8,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.6,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 95.1,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.89,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "qTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-36",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 88.6,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.2,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 93.8,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.35,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "qjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-37",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 78.6,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.3999999999999995,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 92,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.1500000000000001,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "qztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-38",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 66,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.5,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 88.7,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.6099999999999999,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "rDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-39",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 86.7,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.9,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 91.1,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.9800000000000001,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "rTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-40",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 94.3,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.9,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 87.6,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.8,
+              "color": "orange"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "rjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-41",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 74.4,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.1,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 95.2,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.4700000000000002,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "rztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-42",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 77,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 9,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 95,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.31,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "sDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-43",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 74.3,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.6,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 99.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.02,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "sTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-44",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 81.4,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.5,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 94.7,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.01,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "sjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-45",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 66.8,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.7,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 95,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.25,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "sztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-46",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 74.7,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.7,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 89.7,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.73,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "tDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-47",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 77.6,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.2,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 91.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.4,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "tTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-48",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 72.9,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.1,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 94.4,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.2,
+              "color": "orange"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "tjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-49",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 72.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.8,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.4100000000000001,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "tztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-50",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 98.9,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 9,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 95.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.22,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "uDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-51",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 86.3,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.3999999999999995,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.2,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.49,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "uTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-52",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 78.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.9,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 89.8,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.85,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "ujtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-53",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 76.5,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.1,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 92,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.56,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "uztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-54",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 81.1,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.3,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.1,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.44,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "vDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-55",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 89.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.2,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 87.6,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.28,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "vTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-56",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 83.9,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.3999999999999995,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 99.9,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.26,
+              "color": "orange"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "vjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-57",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 63.3,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.6,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 97.6,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.4500000000000002,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "vztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-58",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 71.7,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 4.9,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 89.4,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.7,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "wDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-59",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 80.1,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.5,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 91.8,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.09,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "wTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-60",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 74.8,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.2,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 89.5,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.35,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "wjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-61",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 94.8,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.3,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 90.6,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.1300000000000001,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "wztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-62",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 95,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 4.8,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 87.3,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.22,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "xDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-63",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 87.9,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.3,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 98.4,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.33,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "xTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-64",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 68.5,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.6000000000000005,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 90.4,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.86,
+              "color": "orange"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "xjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-65",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 91.2,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.5,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.4,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.5,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "xztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-66",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 82.1,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.3,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 97.4,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.2,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "yDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-67",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 87,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.2,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 93.4,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.54,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "yTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-68",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 69.4,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.200000000000001,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 93.5,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.34,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "yjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-69",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 90.3,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 6.6000000000000005,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.4,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.78,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "yztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-70",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 90,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 9.6,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 94.1,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.31,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "zDtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-71",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 75.2,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.3999999999999995,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 94.9,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.4200000000000002,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "zTtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-72",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 92.4,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.5,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 97,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.86,
+              "color": "orange"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "zjtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-73",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 76.5,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.5,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 89.9,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.23,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "zztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-74",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 87,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 7.3,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 94.1,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.8600000000000001,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "0Dtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-75",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 79.1,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 7,
+              "color": "orange"
+            },
+            {
+              "key": "Uptime",
+              "value": 88.5,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.79,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "0Ttm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-76",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 78.5,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 5.8999999999999995,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 87,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "0jtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-77",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 76.6,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.299999999999999,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 91,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.2,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "0ztm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-78",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 66.9,
+              "color": "orange"
+            },
+            {
+              "key": "KPI2",
+              "value": 9,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 0.46,
+              "color": "green"
+            }
+          ],
+          "statusColor": "orange"
+        }
+      },
+      {
+        "_index": "asset-status",
+        "_id": "1Dtm65gBsdXsPqhO8lsd",
+        "_score": 1,
+        "_source": {
+          "asset_id": "asset-79",
+          "details": [
+            {
+              "key": "KPI1",
+              "value": 86.4,
+              "color": "green"
+            },
+            {
+              "key": "KPI2",
+              "value": 8.2,
+              "color": "green"
+            },
+            {
+              "key": "Uptime",
+              "value": 96.1,
+              "color": "green"
+            },
+            {
+              "key": "Errors",
+              "value": 1.15,
+              "color": "green"
+            }
+          ],
+          "statusColor": "green"
+        }
+      }
+    ]
+  }
+}
