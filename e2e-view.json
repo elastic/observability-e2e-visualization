@@ -88,9 +88,59 @@
       ]
     },
     {
+      "name": "node-details",
+      "url": "input-data/asset-db-response.json",
+      "format": { "type": "json", "property": "hits.hits" },
+      "transform": [
+        { "type": "project", "fields": ["_source.asset_id", "_source.domain"], "as":["asset_id", "group"] }
+      ]
+    },
+    {
+      "name": "node-status",
+      "url": "input-data/asset-status-response.json",
+      "format": { "type": "json", "property": "hits.hits" },
+      "transform": [
+        { "type": "project", "fields": ["_source.asset_id", "_source.statusColor", "_source.details"], "as":["asset_id", "borderColor", "details"] }
+      ]
+    },
+    {
       "name": "node-data",
       "source": "node-list",
       "transform": [
+        {
+          "type": "lookup",
+          "from": "node-details",
+          "key": "asset_id",
+          "fields": [
+            "name"
+          ],
+          "values": [
+            "group"
+          ],
+          "as": [
+            "group"
+          ],
+          "default": [
+            ""
+          ]
+        },
+        {
+          "type": "lookup",
+          "from": "node-status",
+          "key": "asset_id",
+          "fields": [
+            "name"
+          ],
+          "values": [
+            "borderColor", "details"
+          ],
+          "as": [
+            "borderColor", "details"
+          ],
+          "default": [
+            "", []
+          ]
+        },
         {
           "type": "lookup",
           "from": "source-connections",
@@ -475,7 +525,7 @@
     },
     {
       "name": "nodeRadius",
-      "value": 16,
+      "value": 24,
       "bind": {
         "input": "range",
         "min": 1,
