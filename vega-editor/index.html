@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full Screen Vega Chart</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="index.css">
+  <!-- Import Vega & Vega-Embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+
+  <div id="data-inspector">
+    <button id="inspector-toggle" aria-expanded="false" aria-controls="inspector-panel">
+      Inspect Data
+    </button>
+    <div id="inspector-panel" role="region" hidden>
+      <h3>Data Inspector</h3>
+      <label for="data-selector">Select data source:</label>
+      <select id="data-selector"></select>
+      <pre id="data-display"><code></code></pre>
+    </div>
+  </div>
+
+  <script type="module" src="index.tsx"></script>
+</body>
+</html>
