@@ -4,7 +4,8 @@
   "description": "vega files to be used for e2e observability diagrams",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vega-viewer": "node vega-viewer/server.js"
   },
   "repository": {
     "type": "git",
