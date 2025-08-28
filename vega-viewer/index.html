@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Full Screen Vega Chart</title>
+  <title>Full Screen Vega Chart Viewer</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="index.css">
@@ -11,6 +11,12 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
+
+  <div id="file-selector-panel">
+    <label for="file-selector">Select Vega spec file:</label>
+    <select id="file-selector"></select>
+  </div>
+
   <div id="vis"></div>
 
   <div id="data-inspector">
@@ -25,6 +31,6 @@
     </div>
   </div>
 
-  <script type="module" src="index.tsx"></script>
+  <script type="module" src="index.js"></script>
 </body>
 </html>

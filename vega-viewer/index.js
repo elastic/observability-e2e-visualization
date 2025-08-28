@@ -4,21 +4,21 @@
  */
 
 // Since vega-embed is loaded from a script tag in index.html, 
-// we need to declare it to TypeScript to avoid compilation errors.
-declare const vegaEmbed: any;
+// we can use it directly
 
-// A type for the Vega View object, for better type safety.
-type VegaView = {
-  data: (name: string) => object[];
-  runAsync: () => Promise<void>;
-  // Add other view methods if needed
-};
+async function fetchVegaSpecFiles() {
+  const res = await fetch('/vega-spec-files');
+  if (!res.ok) return [];
+  return res.json();
+}
 
-async function main() {
+let currentSpec = {};
+
+async function fetchAndRenderVegaSpec(file) {
   const visContainer = document.getElementById('vis');
   const inspectorPanel = document.getElementById('inspector-panel');
   const toggleButton = document.getElementById('inspector-toggle');
-  const dataSelector = document.getElementById('data-selector') as HTMLSelectElement | null;
+  const dataSelector = document.getElementById('data-selector');
   const dataDisplay = document.getElementById('data-display')?.querySelector('code');
 
   if (!visContainer || !inspectorPanel || !toggleButton || !dataSelector || !dataDisplay) {
@@ -27,22 +27,18 @@ async function main() {
   }
 
   try {
-    const specResponse = await fetch('chart.vg.json');
-
+    const specResponse = await fetch(`/vega-spec?file=${encodeURIComponent(file)}`);
     if (!specResponse.ok) {
       throw new Error(`HTTP error! status: ${specResponse.status}`);
     }
-    
     const vegaSpec = await specResponse.json();
-    
-    // Embed the visualization. This will fetch remote data specified in the spec.
+    currentSpec = vegaSpec; // Store the current spec
+    visContainer.innerHTML = '';
     const result = await vegaEmbed('#vis', vegaSpec, { actions: false });
-    const view: VegaView = result.view;
+    const view = result.view;
     console.log('Vega chart rendered successfully.');
 
     // --- Data Inspector Logic ---
-
-    // Function to update the data display
     const updateDataDisplay = () => {
       const selectedDataName = dataSelector.value;
       if (selectedDataName) {
@@ -57,8 +53,8 @@ async function main() {
 
     // Populate the dropdown with data source names from the spec
     if (vegaSpec.data && Array.isArray(vegaSpec.data)) {
-      dataSelector.innerHTML = ''; // Clear existing options
-      vegaSpec.data.forEach((source: { name: string }) => {
+      dataSelector.innerHTML = '';
+      vegaSpec.data.forEach((source) => {
         if (source.name) {
           const option = document.createElement('option');
           option.value = source.name;
@@ -75,8 +71,6 @@ async function main() {
       inspectorPanel.hidden = !isHidden;
       toggleButton.setAttribute('aria-expanded', String(isHidden));
       toggleButton.textContent = isHidden ? 'Hide Inspector' : 'Inspect Data';
-
-      // Load data for the first time when panel is opened
       if (isHidden) {
         updateDataDisplay();
       }
@@ -86,6 +80,37 @@ async function main() {
     console.error('Error loading or rendering Vega chart:', error);
     visContainer.innerHTML = `<p style="color: red; padding: 1rem;">Failed to load chart. See browser console for details.</p>`;
   }
+}
+
+async function main() {
+  const fileSelector = document.getElementById('file-selector');
+
+  if (!fileSelector) {
+    console.error('Required UI elements are missing.');
+    return;
+  }
+
+  // Load and populate file selector
+  const files = await fetchVegaSpecFiles();
+  console.log('Loaded files:', files); // Debug log
+  fileSelector.innerHTML = '';
+  files.forEach(f => {
+    const option = document.createElement('option');
+    option.value = f;
+    option.textContent = f;
+    fileSelector.appendChild(option);
+  });
+
+  let currentFile = files[0] || '';
+  if (currentFile) {
+    await fetchAndRenderVegaSpec(currentFile);
+  }
+
+  // Handle file selection change
+  fileSelector.addEventListener('change', async () => {
+    currentFile = fileSelector.value;
+    await fetchAndRenderVegaSpec(currentFile);
+  });
 }
 
 // Run the main function when the document is ready.

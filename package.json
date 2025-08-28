@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/elastic/observability-e2e-visualization#readme",
   "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "express": "^5.1.0",
+    "livereload": "^0.10.3",
     "uuid": "^11.1.0",
     "vega": "^6.1.2"
   }
