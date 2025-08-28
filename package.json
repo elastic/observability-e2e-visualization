@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "vega-viewer": "node vega-viewer/server.js"
+    "vega-viewer": "node vega-viewer/server.js",
+    "format:json": "node tools/format-json-compact.js",
+    "format:vega": "node tools/format-json-compact.js vega-spec/e2e-view.vg.json 120 2"
   },
   "repository": {
     "type": "git",
@@ -26,5 +28,8 @@
     "livereload": "^0.10.3",
     "uuid": "^11.1.0",
     "vega": "^6.1.2"
+  },
+  "devDependencies": {
+    "json-stringify-pretty-compact": "^4.0.0"
   }
 }
