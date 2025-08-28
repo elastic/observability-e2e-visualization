@@ -25,7 +25,10 @@
     </button>
     <div id="inspector-panel" role="region" hidden>
       <h3>Data Inspector</h3>
-      <label for="data-selector">Select data source:</label>
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+        <label for="data-selector">Select data source:</label>
+        <button id="refresh-data-btn" title="Refresh data if not loading">🔄</button>
+      </div>
       <select id="data-selector"></select>
       <pre id="data-display"><code></code></pre>
     </div>

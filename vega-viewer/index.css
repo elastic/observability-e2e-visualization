@@ -111,6 +111,21 @@ html, body {
   background-color: #fff;
 }
 
+#refresh-data-btn {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+  margin-left: auto;
+}
+
+#refresh-data-btn:hover {
+  background-color: #f5f5f5;
+}
+
 #data-display {
   flex-grow: 1;
   background-color: #f9f9f9;
@@ -126,4 +141,27 @@ html, body {
 
 #data-display code {
   display: block;
+}
+
+.error-message {
+  color: #d63384;
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.warning-message {
+  color: #664d03;
+  background-color: #fff3cd;
+  border: 1px solid #ffecb5;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.debug-option {
+  font-style: italic;
+  color: #6c757d;
 }
