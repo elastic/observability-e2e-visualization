@@ -9,7 +9,7 @@
   "data": [
     {
       "name": "link-data-raw",
-      "url": "input-data/tmp.json",
+      "url": "input-data/asset-dependencies-responce.json",
       "format": {"type": "json", "property": "hits.hits"},
       "transform": [
         {"type": "formula", "as": "source", "expr": "split(datum._source.asset_pairs, '---')[0]"},

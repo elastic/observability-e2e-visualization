@@ -7,9 +7,13 @@ const connectLivereload = require('connect-livereload');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// LiveReload server watches vega-viewer and input-data
+// LiveReload server watches vega-viewer, input-data, and vega-spec
 const liveReloadServer = livereload.createServer();
-liveReloadServer.watch([path.join(__dirname), path.join(__dirname, '../input-data')]);
+liveReloadServer.watch([
+  path.join(__dirname),
+  path.join(__dirname, '../input-data'),
+  path.join(__dirname, '../vega-spec')
+]);
 
 // Add livereload middleware
 app.use(connectLivereload());
@@ -37,7 +41,7 @@ app.get('/vega-spec-files', (req, res) => {
   });
 });
 
-// Serve selected Vega spec file from vega-spec
+// Serve selected Vega spec file from vega-spec (legacy endpoint kept for compatibility)
 app.get('/vega-spec', (req, res) => {
   const file = req.query.file;
   if (!file) {
@@ -52,8 +56,10 @@ app.get('/vega-spec', (req, res) => {
   res.sendFile(filePath);
 });
 
-// Serve files from input-data directory
-app.use('/input-data', express.static(inputDataDir));
+// Serve all files from vega-spec and input-data directories as static assets
+// Disable caching to make iteration easier during development
+app.use('/vega-spec', express.static(vegaSpecDir, { etag: false, maxAge: 0 }));
+app.use('/input-data', express.static(inputDataDir, { etag: false, maxAge: 0 }));
 
 // List available input data files
 app.get('/input-data-files', (req, res) => {
