@@ -279,11 +279,11 @@ function initializeDataInspector() {
 
   // Add refresh button functionality
   const refreshButton = document.getElementById('refresh-data-btn');
+  const copyButton = document.getElementById('copy-data-btn');
+
   const handleRefresh = () => {
     console.log('Refreshing data inspector...');
     dataDisplay.textContent = 'Refreshing data...';
-    
-    // Wait a moment then try to refresh
     setTimeout(() => {
       const currentSelector = document.getElementById('data-selector');
       if (currentSelector.value) {
@@ -294,12 +294,60 @@ function initializeDataInspector() {
     }, 100);
   };
 
+  // Add copy button functionality (targets the <code> inside #data-display)
+  const handleCopy = () => {
+    const codeElem = document.getElementById('data-display')?.querySelector('code');
+    const text = codeElem ? codeElem.textContent : '';
+    if (!text) return;
+    // Try modern clipboard API first
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          copyButton.textContent = '✅ Copied!';
+          setTimeout(() => { copyButton.textContent = '📋 Copy'; }, 1200);
+        })
+        .catch(() => {
+          fallbackCopyTextToClipboard(text);
+        });
+    } else {
+      fallbackCopyTextToClipboard(text);
+    }
+  };
+
+  // Fallback for clipboard copy
+  function fallbackCopyTextToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'absolute';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    const selection = document.getSelection();
+    const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+    textarea.select();
+    try {
+      document.execCommand('copy');
+      copyButton.textContent = '✅ Copied!';
+    } catch (err) {
+      copyButton.textContent = '❌ Error';
+    }
+    document.body.removeChild(textarea);
+    setTimeout(() => { copyButton.textContent = '📋 Copy'; }, 1200);
+    if (selected) {
+      selection.removeAllRanges();
+      selection.addRange(selected);
+    }
+  }
+
   // Add toggle button listener
   toggleButton.addEventListener('click', handleToggle);
   if (refreshButton) {
     refreshButton.addEventListener('click', handleRefresh);
   }
-  
+  if (copyButton) {
+    copyButton.addEventListener('click', handleCopy);
+  }
+
   // Store listener reference for cleanup
   dataInspectorListeners.toggleListener = handleToggle;
   if (refreshButton) {

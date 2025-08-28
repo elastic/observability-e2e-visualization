@@ -30,7 +30,10 @@
         <button id="refresh-data-btn" title="Refresh data if not loading">🔄</button>
       </div>
       <select id="data-selector"></select>
-      <pre id="data-display"><code></code></pre>
+  <div style="position: relative; width: 100%; display: flex; flex-direction: column; padding: 0; margin: 0;">
+  <pre id="data-display"><code></code></pre>
+        <button id="copy-data-btn" title="Copy displayed data to clipboard" style="position: absolute; top: 0.5rem; right: 0.5rem; z-index: 2;">📋 Copy</button>
+      </div>
     </div>
   </div>
 
