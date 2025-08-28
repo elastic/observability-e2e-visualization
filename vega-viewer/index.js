@@ -326,14 +326,18 @@ async function main() {
     fileSelector.appendChild(option);
   });
 
-  let currentFile = files[0] || '';
+  // Try to restore last selected file from localStorage
+  let lastSelectedFile = localStorage.getItem('lastVegaSpecFile');
+  let currentFile = files.includes(lastSelectedFile) ? lastSelectedFile : files[0] || '';
   if (currentFile) {
+    fileSelector.value = currentFile;
     await fetchAndRenderVegaSpec(currentFile);
   }
 
   // Handle file selection change
   fileSelector.addEventListener('change', async () => {
     currentFile = fileSelector.value;
+    localStorage.setItem('lastVegaSpecFile', currentFile);
     await fetchAndRenderVegaSpec(currentFile);
   });
 }
