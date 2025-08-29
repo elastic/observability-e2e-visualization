@@ -1,0 +1,15 @@
+{
+  "counts": { "frontends": 20, "services": 150, "databases": 40 },
+  "layers": { "L1": 30, "L2": 90, "L3": 30 },
+  "hotspots": { "count": 3, "weightBoost": 3.5 },
+  "sessions": { "total": 20000, "seed": 42, "perFrontendSkew": 0.6 },
+  "probabilities": { "straight": 0.6, "fanOut": 0.3, "fanIn": 0.1, "svcToSvcExtra": 0.15 },
+  "latencyMs": {
+    "L0_L1": [50, 150],
+    "L1_L2": [20, 200],
+    "L2_L3": [10, 120],
+    "L3_DB": [5, 40]
+  },
+  "errors": { "rate": 0.015 },
+  "constraints": { "maxOutDegree": 3, "crossDomainPct": 0.08 }
+}
