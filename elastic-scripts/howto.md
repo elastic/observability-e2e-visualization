@@ -1,21 +1,21 @@
-# How to install the PoC
+# How to install the PoC in Elastic
 
-## Generate input data
+## Purpose
 
-```bash
-node elastic-scriptsinput-data/generate_data.js
-````
-upload the `input.ndjson` to elasticsearch into index named `input-logs`
+List of commands to create artifacts in Elastic for this project.
 
-validate in Dev-tools if all entries were uploaded successfully
+## Components
 
-`GET input-logs/_count`
+The following files are part of this project:
 
-## setup injest pipeline `asset-stats`
+### 1. create-asset-stats-index.json
+Creates the asset-stats index with mappings for session_id and sorted_assets.
 
-execute in Dev-tools the request in ingest-pipeline-asset-stats.http
+### 2. ingest-pipeline-asset-stats.json
+Defines an ingest pipeline to convert a list of sorted assets into asset pairs for graph edges.
 
+### 3. transform-asset-stats.json
+Creates a transform to group events by session_id and produce a sorted list of assets per session.
 
-
-
-
+### 4. transform-asset-dependencies.json
+Creates a transform to aggregate asset pairs into a dependency index for graph construction.

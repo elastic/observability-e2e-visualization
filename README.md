@@ -1,12 +1,65 @@
 # observability-e2e-visualization
 
 ## Purpose
-To have a directed graph analogue to service map as custom vega script in Kibana.
+
+This project showcases how to leverage Elastic transforms to generate a directed graph visualization for enterprise asset autodiscovery. The intention is to enable automatic discovery of assets, typically managed in a Configuration Management Database (CMDB), by analyzing event data.
+This repository provides also the tools to develop the Vega files.
+
+## Solution Idea
+
+The prerequisites to make this approach work are:
+- every event has an `asset_id` which represents an entry in the CMDB
+- every event has a `timestamp`
+- there is a field (e.g. `session_id`) which has the same value for events which belong together
+- the CMDB is synchronized to an Elastic index having `asset_id` as id and provides details about the asset: e.g. `service.name`, `domain`, ...
+- (optional) there is a query which can provide status for an `asset_id` e.g. KPIs
+
+The idea is to group the events by the `session_id` to get a list of assets which are sorted by `min(timestamp)`. Then to build pairs of neighbours, e.g. `[A,B,C,D]` → `[(A,B), (B,C), (C,D)]`. Then a directed graph can be created where assets are nodes and the pairs represent the directed edges.
 
 ## Features
-- directed Graph using forced layout
-- colored border (intended to be used for status)
-- tooltip with key/value/color list
+
+### Main Components
+
+#### elastic-scripts
+This directory contains scripts for interacting with Elasticsearch. These scripts handle data indexing, querying, and transformation operations needed to prepare your data for visualization. They likely include functionality for connecting to Elasticsearch instances, creating and managing indices, and executing search queries.
+
+#### input-data
+This folder stores the raw data files that serve as inputs for your visualization pipeline. These could be JSON files, CSVs, or other data formats that are processed before visualization. This separation allows you to keep source data organized and versioned.
+
+#### vega-specs
+Contains Vega specification files that define your visualizations. These are declarative JSON files that describe how data should be visually encoded using the Vega grammar. These specifications define mappings between your data properties and visual elements like position, color, and size.
+
+### Development Resources
+
+#### vega-viewer
+A custom viewer application that renders the Vega specifications with your data. This likely provides a development environment where you can preview your visualizations, adjust parameters, and test interactions before deploying them to production.
+
+#### tools
+Utility scripts and helper applications to support the development workflow. This may include data transformation tools, specification validators, testing utilities, or build scripts that streamline your development process.
+
+#### doc
+Documentation files detailing how to use the project, API references, examples, and implementation details. This helps ensure that all team members understand how the system works and how to contribute effectively.
+
+### Visualization Output
+
+The project generates a sophisticated network visualization with the following characteristics:
+
+#### Directed Graph with Force Layout
+- Uses a physics-based force simulation to position nodes and links dynamically
+- Nodes represent entities in your data while edges show relationships between them
+- Force layout automatically arranges elements to minimize edge crossings and optimize readability
+- Interactive capabilities allow users to drag nodes, zoom, and explore the network structure
+
+#### Status-Based Visual Encoding
+- Nodes feature colored borders that encode status information
+- Color mapping provides immediate visual indication of different states or categories
+- Consistent color scheme helps users quickly identify patterns and anomalies in the data
+
+#### Rich Interactive Tooltips
+- Contextual tooltips appear on hover/selection to provide detailed information
+- Structured as key/value pairs with associated color indicators
+- Enables exploration of additional data dimensions without cluttering the main visualization
+- Helps users understand specific attributes of nodes without losing context of the overall graph
 
 ![Example visualization](example.png)
 
@@ -33,98 +86,47 @@ To make this visualization script as reusable as possible within Kibana's constr
 **Summary:**
 - The script must be adapted for Kibana by embedding the ElasticSearch query and transforming the results to match the expected node structure, as described above. This enables the visualization to be reused with different data sources, as long as the transform produces the required structure.
 
-### Data File: `data.json`
-
-The `data.json` file provides the input data for the directed graph visualization. It defines the nodes and their properties, which are visualized and used for tooltips in the Vega graph specifications (such as `directed-graph-tooltip.vg.json`).
-
-#### Structure
-
-- **nodes**: An array of node objects, each representing a service or component in the graph.
-    - **name**: The display name of the node.
-    - **group**: A category or grouping for the node (e.g., "Accounting", "Customer", "Reporting", "Banking").
-    - **details**: An array of key performance indicators (KPIs) or metrics for the node. Each detail object contains:
-        - **key**: The name of the metric (e.g., "KPI1", "Uptime").
-        - **value**: The value of the metric.
-        - **color**: The color representing the status of the metric (e.g., "green", "orange").
-    - **borderColor**: The color of the node's border, typically reflecting the overall status (e.g., "green", "orange").
-
-#### Example
-
-```json
-{
-    "nodes": [
-        {
-            "name": "Ledger+",
-            "group": "Accounting",
-            "details": [
-                {"key": "KPI1", "value": 95.2, "color": "green"},
-                {"key": "KPI2", "value": 8.7, "color": "green"},
-                {"key": "Uptime", "value": 99.7, "color": "green"},
-                {"key": "Errors", "value": 0.02, "color": "green"}
-            ],
-            "borderColor": "green"
-        }
-        // ... more nodes ...
-    ]
-}
-```
-
-
-#### Links (Edges)
-
-In a directed graph, **links** (or edges) represent the relationships or flows between nodes. In the provided `data.json`, the `links` array contains two types of entries:
-
-- Entries with only a `value` field (e.g., `{ "value": "Sales performance metrics" }`).
-- Entries with `source`, `target`, and `value` fields (e.g., `{ "source": "PowerBI", "target": "Sisense", "value": "Market trends" }`).
-
-**Structure:**
-- **links**: An array of link objects.
-    - **source**: The name of the source node.
-    - **target**: The name of the target node.
-    - **value**: A string describing the relationship or type of connection.
-
-**Example:**
-
-```json
-{
-    "links": [
-        { "value": "Sales performance metrics" },
-        { "source": "PowerBI", "target": "Sisense", "value": "Market trends" },
-        { "source": "RTGS-Plus", "target": "CBS-Pro", "value": "Market trends" },
-        { "source": "PowerBI", "target": "CBS-Pro", "value": "Market trends" },
-        { "source": "PowerBI", "target": "Birst", "value": "Customer feedback" }
-        // ... more links ...
-    ]
-}
-```
-
-**Note:**
-- For the graph visualization to work as intended, only the entries with both `source` and `target` will be used to draw edges between nodes.
-
-- If you want to visualize relationships, ensure your `links` array contains objects with at least `source` and `target` fields. The `value` field does not have any effect for now.
-
-### Relation to `directed-graph-tooltip.vg.json`
-
-The `directed-graph-tooltip.vg.json` file is a Vega specification that defines how the graph is rendered and how tooltips are displayed. It consumes the data from `data.json` to:
-
-- Render each node with its `name`, `group`, and `borderColor`.
-- Display a tooltip for each node, showing the list of `details` (key/value/color) when hovered.
-- Use the `color` fields to visually indicate the status of each metric in the tooltip.
-
-**Summary:**
-- Update `data.json` to change the nodes, their metrics, or status colors.
-- The Vega spec (`directed-graph-tooltip.vg.json`) will automatically reflect these changes in the visualization and tooltips.
 
 ### Development
 
-For an optimal development experience, consider using these tools:
+#### Getting Started
 
-#### IDE Integration
-VS Code users can enhance productivity with these Vega-specific plugins:
-- [Vega Viewer](https://marketplace.visualstudio.com/items?itemName=RandomFractalsInc.vscode-vega-viewer) - Preview Vega visualizations directly in your editor
-- [Vega for VS Code](https://marketplace.visualstudio.com/items?itemName=kanitw.vega-vscode) - Syntax highlighting and linting for Vega specifications
+1. **Clone the repository:**
+	```bash
+	git clone https://github.com/elastic/observability-e2e-visualization.git
+	cd observability-e2e-visualization
+	```
 
-#### AI-Assisted Development
-When using AI coding assistants:
-- Start with the provided `prompt.txt` file to enable AI agents to access terminal output and read error messages
-- Note that the `render_vega.sh` script execution will always require your confirmation for security reasons
+2. **Install dependencies:**
+	```bash
+	npm install
+	```
+
+3. **Start the Vega Viewer:**
+	```bash
+	npm run vega-viewer
+	```
+	Then open [http://localhost:3000/](http://localhost:3000/) in your browser or within VS Code.
+
+#### Vega Viewer Features
+
+The custom Vega Viewer provides a local development environment for previewing and interacting with your Vega specifications and data. Key features include:
+- Live reloading of specs and data files
+- Interactive exploration of graph visualizations
+- Support for debugging and rapid prototyping
+
+#### Recommended Development Workflow
+
+- Use GitHub Copilot or a similar agentic coding assistant to accelerate development. These tools can access your code, data, terminal, and even the internal browser for a seamless workflow.
+- Make incremental changes to your Vega specs and supporting scripts, using the Vega Viewer to validate and refine your visualizations in real time.
+- Before committing changes to Vega spec files, ensure they are formatted for readability and consistency:
+  ```bash
+  npm run format:json
+  ```
+  This will format all Vega scripts to a readable and standardized JSON structure.
+
+#### Additional Tips
+
+- Keep your data and spec files under version control for reproducibility.
+- Document any custom scripts or workflows in the appropriate `tools` or `doc` folders.
+- Use the provided mock data and responses for local development and testing.
