@@ -28,7 +28,8 @@ The `data.json` file provides the input data for the directed graph visualizatio
 #### Structure
 
 - **nodes**: An array of node objects, each representing a service or component in the graph.
-    - **name**: The display name of the node.
+    - **name**: The stable identifier (ID) of the node. This is used to reference nodes from links (`source`/`target`) and should be unique. It is not displayed by default.
+    - **label**: The display label of the node, shown on the node and in tooltips.
     - **group**: A category or grouping for the node (e.g., "Accounting", "Customer", "Reporting", "Banking").
     - **details**: An array of key performance indicators (KPIs) or metrics for the node. Each detail object contains:
         - **key**: The name of the metric (e.g., "KPI1", "Uptime").
@@ -42,7 +43,8 @@ The `data.json` file provides the input data for the directed graph visualizatio
 {
     "nodes": [
         {
-            "name": "Ledger+",
+            "name": "ledger-plus",
+            "label": "Ledger+",
             "group": "Accounting",
             "details": [
                 {"key": "KPI1", "value": 95.2, "color": "green"},
@@ -95,9 +97,12 @@ In a directed graph, **links** (or edges) represent the relationships or flows b
 
 The `directed-graph-tooltip.vg.json` file is a Vega specification that defines how the graph is rendered and how tooltips are displayed. It consumes the data from `data.json` to:
 
-- Render each node with its `name`, `group`, and `borderColor`.
+- Render each node with its `label`, `group`, and `borderColor`.
 - Display a tooltip for each node, showing the list of `details` (key/value/color) when hovered.
 - Use the `color` fields to visually indicate the status of each metric in the tooltip.
+
+Note:
+- Link endpoints (`source`/`target`) must match the node `name` (ID) values, not the `label`.
 
 **Summary:**
 - Update `data.json` to change the nodes, their metrics, or status colors.

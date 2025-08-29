@@ -63,7 +63,7 @@
       "name": "node-details",
       "url": "input-data/asset-db-response.json",
       "format": {"type": "json", "property": "hits.hits"},
-      "transform": [{"type": "project", "fields": ["_source.asset_id", "_source.domain"], "as": ["asset_id", "group"]}]
+      "transform": [{"type": "project", "fields": ["_source.asset_id", "_source.domain", "_source.service"], "as": ["asset_id", "group", "label"]}]
     },
     {
       "name": "node-status",
@@ -87,9 +87,9 @@
           "from": "node-details",
           "key": "asset_id",
           "fields": ["name"],
-          "values": ["group"],
-          "as": ["group"],
-          "default": [""]
+          "values": ["group", "label"],
+          "as": ["group", "label"],
+          "default": ["", ""]
         },
         {
           "type": "lookup",
@@ -428,7 +428,7 @@
           "fill": {"signal": "'white'"},
           "y": {"field": "y"},
           "x": {"field": "x"},
-          "text": {"field": "datum.name"},
+          "text": {"field": "datum.label"},
           "align": {"value": "center"},
           "fontSize": {"value": 10},
           "baseline": {"value": "middle"},
@@ -468,7 +468,7 @@
             "update": {
               "x": {"value": 10},
               "y": {"value": 20},
-              "text": {"signal": "nodeHover.node ? nodeHover.node.name : ''"},
+              "text": {"signal": "nodeHover.node ? nodeHover.node.label : ''"},
               "fill": {"value": "#111"},
               "fontWeight": {"value": "bold"},
               "fontSize": {"value": 13}
