@@ -16,6 +16,10 @@ The prerequisites to make this approach work are:
 
 The idea is to group the events by the `session_id` to get a list of assets which are sorted by `min(timestamp)`. Then to build pairs of neighbours, e.g. `[A,B,C,D]` → `[(A,B), (B,C), (C,D)]`. Then a directed graph can be created where assets are nodes and the pairs represent the directed edges.
 
+There is an overview on data flow for the given example data
+
+![Data Flow diagram](doc/data-flow-diagram.svg)
+
 ## Features
 
 ### Main Components
