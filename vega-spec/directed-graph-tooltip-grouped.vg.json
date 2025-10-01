@@ -78,11 +78,16 @@
       "source": "raw-nodes",
       "transform": [
         {
+          "type": "formula",
+          "as": "color_priority",
+          "expr": "datum.borderColor === 'red' ? 1 : datum.borderColor === 'orange' ? 2 : 3"
+        },
+        {
           "type": "aggregate",
           "groupby": ["group"],
-          "fields": ["name"],
-          "ops": ["count"],
-          "as": ["member_count"]
+          "fields": ["name", "color_priority"],
+          "ops": ["count", "min"],
+          "as": ["member_count", "min_priority"]
         },
         {
           "type": "formula",
@@ -91,13 +96,13 @@
         },
         {
           "type": "formula",
-          "as": "details",
-          "expr": "[{key: 'Members', value: datum.member_count, color: 'green'}]"
+          "as": "borderColor",
+          "expr": "datum.min_priority === 1 ? 'red' : datum.min_priority === 2 ? 'orange' : 'green'"
         },
         {
           "type": "formula",
-          "as": "borderColor",
-          "expr": "'green'"
+          "as": "details",
+          "expr": "[{key: 'Members', value: datum.member_count, color: 'blue'}]"
         },
         {
           "type": "lookup",
